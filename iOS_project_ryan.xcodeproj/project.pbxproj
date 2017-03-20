@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17213C681E8021B5000678DD /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17213C651E8021B5000678DD /* HistoryViewController.m */; };
+		17213C691E8021B5000678DD /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17213C671E8021B5000678DD /* ShareViewController.m */; };
 		941854201E75E1C800C1482D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9418541F1E75E1C800C1482D /* main.m */; };
 		941854231E75E1C800C1482D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854221E75E1C800C1482D /* AppDelegate.m */; };
 		941854261E75E1C800C1482D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854251E75E1C800C1482D /* ViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17213C641E8021B5000678DD /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		17213C651E8021B5000678DD /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		17213C661E8021B5000678DD /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		17213C671E8021B5000678DD /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		9418541B1E75E1C800C1482D /* iOS_project_ryan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_project_ryan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9418541F1E75E1C800C1482D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		941854211E75E1C800C1482D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 		941854351E7617FE00C1482D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				17213C641E8021B5000678DD /* HistoryViewController.h */,
+				17213C651E8021B5000678DD /* HistoryViewController.m */,
+				17213C661E8021B5000678DD /* ShareViewController.h */,
+				17213C671E8021B5000678DD /* ShareViewController.m */,
 				941854251E75E1C800C1482D /* ViewController.m */,
 				941854241E75E1C800C1482D /* ViewController.h */,
 				941854381E76185A00C1482D /* WebViewController.h */,
@@ -258,11 +268,13 @@
 			files = (
 				941854411E761A7D00C1482D /* Picture.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
+				17213C681E8021B5000678DD /* HistoryViewController.m in Sources */,
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,
 				941854201E75E1C800C1482D /* main.m in Sources */,
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
 				9418543A1E76185A00C1482D /* WebViewController.m in Sources */,
+				17213C691E8021B5000678DD /* ShareViewController.m in Sources */,
 				9418543D1E76186500C1482D /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +434,7 @@
 				941854341E75E1C800C1482D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

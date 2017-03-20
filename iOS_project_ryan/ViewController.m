@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize btnHistory, btnShare;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

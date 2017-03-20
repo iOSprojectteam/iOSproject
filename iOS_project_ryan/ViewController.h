@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
 
+UIButton *btnHistory;
+UIButton *btnShare;
+}
+
+@property (nonatomic, strong) UIButton *btnHistory;
+@property (nonatomic, strong) UIButton *btnShare;
 
 @end
 
