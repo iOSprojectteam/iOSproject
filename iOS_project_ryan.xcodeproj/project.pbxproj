@@ -30,6 +30,7 @@
 		941854601E7636F400C1482D /* sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854571E7636F400C1482D /* sparkle.png */; };
 		941854611E7636F400C1482D /* Star-PNG-Clipart.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854581E7636F400C1482D /* Star-PNG-Clipart.png */; };
 		941854621E7636F400C1482D /* sword-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854591E7636F400C1482D /* sword-png-16.png */; };
+		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		941854571E7636F400C1482D /* sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sparkle.png; sourceTree = "<group>"; };
 		941854581E7636F400C1482D /* Star-PNG-Clipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-PNG-Clipart.png"; sourceTree = "<group>"; };
 		941854591E7636F400C1482D /* sword-png-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-png-16.png"; sourceTree = "<group>"; };
+		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 		941854351E7617FE00C1482D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AEDE6A381E802896004E3015 /* UserViewController.h */,
+				AEDE6A391E802896004E3015 /* UserViewController.m */,
 				17213C641E8021B5000678DD /* HistoryViewController.h */,
 				17213C651E8021B5000678DD /* HistoryViewController.m */,
 				17213C661E8021B5000678DD /* ShareViewController.h */,
@@ -273,6 +278,7 @@
 				941854201E75E1C800C1482D /* main.m in Sources */,
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
+				AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */,
 				9418543A1E76185A00C1482D /* WebViewController.m in Sources */,
 				17213C691E8021B5000678DD /* ShareViewController.m in Sources */,
 				9418543D1E76186500C1482D /* EditViewController.m in Sources */,
