@@ -13,6 +13,21 @@
 		941854291E75E1C800C1482D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941854271E75E1C800C1482D /* Main.storyboard */; };
 		9418542B1E75E1C800C1482D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9418542A1E75E1C800C1482D /* Assets.xcassets */; };
 		9418542E1E75E1C800C1482D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9418542C1E75E1C800C1482D /* LaunchScreen.storyboard */; };
+		9418543A1E76185A00C1482D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854391E76185A00C1482D /* WebViewController.m */; };
+		9418543D1E76186500C1482D /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9418543C1E76186500C1482D /* EditViewController.m */; };
+		941854411E761A7D00C1482D /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854401E761A7D00C1482D /* Picture.m */; };
+		941854441E761A9300C1482D /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854431E761A9300C1482D /* Sticker.m */; };
+		941854471E76264100C1482D /* FontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854461E76264100C1482D /* FontViewController.m */; };
+		941854501E7636D800C1482D /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 9418544F1E7636D800C1482D /* person.png */; };
+		9418545A1E7636F400C1482D /* Funny-Face_Glasses.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854511E7636F400C1482D /* Funny-Face_Glasses.png */; };
+		9418545B1E7636F400C1482D /* glass-tina-fey.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854521E7636F400C1482D /* glass-tina-fey.png */; };
+		9418545C1E7636F400C1482D /* glasses_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854531E7636F400C1482D /* glasses_pink.png */; };
+		9418545D1E7636F400C1482D /* hammer_PNG3888.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854541E7636F400C1482D /* hammer_PNG3888.png */; };
+		9418545E1E7636F400C1482D /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854551E7636F400C1482D /* hat.png */; };
+		9418545F1E7636F400C1482D /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854561E7636F400C1482D /* heart.png */; };
+		941854601E7636F400C1482D /* sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854571E7636F400C1482D /* sparkle.png */; };
+		941854611E7636F400C1482D /* Star-PNG-Clipart.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854581E7636F400C1482D /* Star-PNG-Clipart.png */; };
+		941854621E7636F400C1482D /* sword-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854591E7636F400C1482D /* sword-png-16.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +41,26 @@
 		9418542A1E75E1C800C1482D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9418542D1E75E1C800C1482D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9418542F1E75E1C800C1482D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		941854381E76185A00C1482D /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		941854391E76185A00C1482D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9418543B1E76186500C1482D /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		9418543C1E76186500C1482D /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		9418543F1E761A7D00C1482D /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		941854401E761A7D00C1482D /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		941854421E761A9300C1482D /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
+		941854431E761A9300C1482D /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
+		941854451E76264100C1482D /* FontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontViewController.h; sourceTree = "<group>"; };
+		941854461E76264100C1482D /* FontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontViewController.m; sourceTree = "<group>"; };
+		9418544F1E7636D800C1482D /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		941854511E7636F400C1482D /* Funny-Face_Glasses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Funny-Face_Glasses.png"; sourceTree = "<group>"; };
+		941854521E7636F400C1482D /* glass-tina-fey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glass-tina-fey.png"; sourceTree = "<group>"; };
+		941854531E7636F400C1482D /* glasses_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glasses_pink.png; sourceTree = "<group>"; };
+		941854541E7636F400C1482D /* hammer_PNG3888.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hammer_PNG3888.png; sourceTree = "<group>"; };
+		941854551E7636F400C1482D /* hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hat.png; sourceTree = "<group>"; };
+		941854561E7636F400C1482D /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		941854571E7636F400C1482D /* sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sparkle.png; sourceTree = "<group>"; };
+		941854581E7636F400C1482D /* Star-PNG-Clipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-PNG-Clipart.png"; sourceTree = "<group>"; };
+		941854591E7636F400C1482D /* sword-png-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-png-16.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +93,11 @@
 		9418541D1E75E1C800C1482D /* iOS_project_ryan */ = {
 			isa = PBXGroup;
 			children = (
-				941854211E75E1C800C1482D /* AppDelegate.h */,
-				941854221E75E1C800C1482D /* AppDelegate.m */,
-				941854241E75E1C800C1482D /* ViewController.h */,
-				941854251E75E1C800C1482D /* ViewController.m */,
-				941854271E75E1C800C1482D /* Main.storyboard */,
-				9418542A1E75E1C800C1482D /* Assets.xcassets */,
-				9418542C1E75E1C800C1482D /* LaunchScreen.storyboard */,
-				9418542F1E75E1C800C1482D /* Info.plist */,
+				9418544E1E7636BE00C1482D /* Images */,
+				9418543E1E761A2500C1482D /* Model */,
+				941854371E76181A00C1482D /* Special Classes */,
+				941854361E76181000C1482D /* Nibs */,
+				941854351E7617FE00C1482D /* View Controllers */,
 				9418541E1E75E1C800C1482D /* Supporting Files */,
 			);
 			path = iOS_project_ryan;
@@ -77,6 +109,69 @@
 				9418541F1E75E1C800C1482D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		941854351E7617FE00C1482D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				941854251E75E1C800C1482D /* ViewController.m */,
+				941854241E75E1C800C1482D /* ViewController.h */,
+				941854381E76185A00C1482D /* WebViewController.h */,
+				941854391E76185A00C1482D /* WebViewController.m */,
+				9418543B1E76186500C1482D /* EditViewController.h */,
+				9418543C1E76186500C1482D /* EditViewController.m */,
+				941854451E76264100C1482D /* FontViewController.h */,
+				941854461E76264100C1482D /* FontViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		941854361E76181000C1482D /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				9418542C1E75E1C800C1482D /* LaunchScreen.storyboard */,
+				941854271E75E1C800C1482D /* Main.storyboard */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		941854371E76181A00C1482D /* Special Classes */ = {
+			isa = PBXGroup;
+			children = (
+				941854211E75E1C800C1482D /* AppDelegate.h */,
+				941854221E75E1C800C1482D /* AppDelegate.m */,
+				9418542F1E75E1C800C1482D /* Info.plist */,
+				9418542A1E75E1C800C1482D /* Assets.xcassets */,
+			);
+			name = "Special Classes";
+			sourceTree = "<group>";
+		};
+		9418543E1E761A2500C1482D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9418543F1E761A7D00C1482D /* Picture.h */,
+				941854401E761A7D00C1482D /* Picture.m */,
+				941854421E761A9300C1482D /* Sticker.h */,
+				941854431E761A9300C1482D /* Sticker.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9418544E1E7636BE00C1482D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				941854511E7636F400C1482D /* Funny-Face_Glasses.png */,
+				941854521E7636F400C1482D /* glass-tina-fey.png */,
+				941854531E7636F400C1482D /* glasses_pink.png */,
+				941854541E7636F400C1482D /* hammer_PNG3888.png */,
+				941854551E7636F400C1482D /* hat.png */,
+				941854561E7636F400C1482D /* heart.png */,
+				941854571E7636F400C1482D /* sparkle.png */,
+				941854581E7636F400C1482D /* Star-PNG-Clipart.png */,
+				941854591E7636F400C1482D /* sword-png-16.png */,
+				9418544F1E7636D800C1482D /* person.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +233,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9418545A1E7636F400C1482D /* Funny-Face_Glasses.png in Resources */,
+				9418545C1E7636F400C1482D /* glasses_pink.png in Resources */,
+				9418545F1E7636F400C1482D /* heart.png in Resources */,
+				941854501E7636D800C1482D /* person.png in Resources */,
+				941854601E7636F400C1482D /* sparkle.png in Resources */,
 				9418542E1E75E1C800C1482D /* LaunchScreen.storyboard in Resources */,
+				9418545B1E7636F400C1482D /* glass-tina-fey.png in Resources */,
+				941854611E7636F400C1482D /* Star-PNG-Clipart.png in Resources */,
 				9418542B1E75E1C800C1482D /* Assets.xcassets in Resources */,
+				9418545E1E7636F400C1482D /* hat.png in Resources */,
+				9418545D1E7636F400C1482D /* hammer_PNG3888.png in Resources */,
+				941854621E7636F400C1482D /* sword-png-16.png in Resources */,
 				941854291E75E1C800C1482D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +256,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941854411E761A7D00C1482D /* Picture.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,
 				941854201E75E1C800C1482D /* main.m in Sources */,
+				941854441E761A9300C1482D /* Sticker.m in Sources */,
+				941854471E76264100C1482D /* FontViewController.m in Sources */,
+				9418543A1E76185A00C1482D /* WebViewController.m in Sources */,
+				9418543D1E76186500C1482D /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
