@@ -30,6 +30,7 @@
 		941854601E7636F400C1482D /* sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854571E7636F400C1482D /* sparkle.png */; };
 		941854611E7636F400C1482D /* Star-PNG-Clipart.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854581E7636F400C1482D /* Star-PNG-Clipart.png */; };
 		941854621E7636F400C1482D /* sword-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854591E7636F400C1482D /* sword-png-16.png */; };
+		941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 941C7D031E8B451D00552BB6 /* sticker-background-selected.png */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF999501E8C2079006CFF5E /* Template.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9994F1E8C2079006CFF5E /* Template.m */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		941854571E7636F400C1482D /* sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sparkle.png; sourceTree = "<group>"; };
 		941854581E7636F400C1482D /* Star-PNG-Clipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-PNG-Clipart.png"; sourceTree = "<group>"; };
 		941854591E7636F400C1482D /* sword-png-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-png-16.png"; sourceTree = "<group>"; };
+		941C7D031E8B451D00552BB6 /* sticker-background-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sticker-background-selected.png"; sourceTree = "<group>"; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF9994F1E8C2079006CFF5E /* Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Template.m; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				941854521E7636F400C1482D /* glass-tina-fey.png */,
 				941854531E7636F400C1482D /* glasses_pink.png */,
 				941854541E7636F400C1482D /* hammer_PNG3888.png */,
+				941C7D031E8B451D00552BB6 /* sticker-background-selected.png */,
 				941854551E7636F400C1482D /* hat.png */,
 				941854561E7636F400C1482D /* heart.png */,
 				941854571E7636F400C1482D /* sparkle.png */,
@@ -259,6 +262,7 @@
 				941854501E7636D800C1482D /* person.png in Resources */,
 				941854601E7636F400C1482D /* sparkle.png in Resources */,
 				9418542E1E75E1C800C1482D /* LaunchScreen.storyboard in Resources */,
+				941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */,
 				9418545B1E7636F400C1482D /* glass-tina-fey.png in Resources */,
 				941854611E7636F400C1482D /* Star-PNG-Clipart.png in Resources */,
 				9418542B1E75E1C800C1482D /* Assets.xcassets in Resources */,
