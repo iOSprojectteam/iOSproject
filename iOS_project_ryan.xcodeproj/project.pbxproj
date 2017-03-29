@@ -32,7 +32,7 @@
 		941854621E7636F400C1482D /* sword-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854591E7636F400C1482D /* sword-png-16.png */; };
 		941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 941C7D031E8B451D00552BB6 /* sticker-background-selected.png */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
-		AEF999501E8C2079006CFF5E /* Template.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9994F1E8C2079006CFF5E /* Template.m */; };
+		AEF9995C1E8C6D69006CFF5E /* TemplateCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9995B1E8C6D69006CFF5E /* TemplateCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,8 +73,9 @@
 		941C7D031E8B451D00552BB6 /* sticker-background-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sticker-background-selected.png"; sourceTree = "<group>"; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
-		AEF9994F1E8C2079006CFF5E /* Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Template.m; sourceTree = "<group>"; };
 		AEF999511E8C2095006CFF5E /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		AEF9995A1E8C6D69006CFF5E /* TemplateCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCollectionViewController.h; sourceTree = "<group>"; };
+		AEF9995B1E8C6D69006CFF5E /* TemplateCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +143,8 @@
 				9418543C1E76186500C1482D /* EditViewController.m */,
 				941854451E76264100C1482D /* FontViewController.h */,
 				941854461E76264100C1482D /* FontViewController.m */,
+				AEF9995A1E8C6D69006CFF5E /* TemplateCollectionViewController.h */,
+				AEF9995B1E8C6D69006CFF5E /* TemplateCollectionViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -173,7 +176,6 @@
 				941854401E761A7D00C1482D /* Picture.m */,
 				941854421E761A9300C1482D /* Sticker.h */,
 				941854431E761A9300C1482D /* Sticker.m */,
-				AEF9994F1E8C2079006CFF5E /* Template.m */,
 				AEF999511E8C2095006CFF5E /* Header.h */,
 			);
 			name = Model;
@@ -280,8 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF9995C1E8C6D69006CFF5E /* TemplateCollectionViewController.m in Sources */,
 				941854411E761A7D00C1482D /* Picture.m in Sources */,
-				AEF999501E8C2079006CFF5E /* Template.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
 				17213C681E8021B5000678DD /* HistoryViewController.m in Sources */,
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,
