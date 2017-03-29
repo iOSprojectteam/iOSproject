@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditViewController : UIViewController <UITextFieldDelegate>
+@interface EditViewController : UIViewController <UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 {
     IBOutlet UITextField *tfText;
 }
