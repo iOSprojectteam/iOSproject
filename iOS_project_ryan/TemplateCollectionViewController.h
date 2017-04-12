@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TemplateCollectionViewController : UICollectionViewController <UITextFieldDelegate> {
+@interface TemplateCollectionViewController : UIViewController <UITextFieldDelegate> {
     
 }
 
