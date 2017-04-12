@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TemplateCollectionViewController : UICollectionViewController
+@interface TemplateCollectionViewController : UICollectionViewController <UITextFieldDelegate> {
+    
+}
 
 @end
+
+
+

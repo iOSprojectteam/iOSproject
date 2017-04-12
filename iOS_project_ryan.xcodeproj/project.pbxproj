@@ -32,7 +32,7 @@
 		941854621E7636F400C1482D /* sword-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854591E7636F400C1482D /* sword-png-16.png */; };
 		941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 941C7D031E8B451D00552BB6 /* sticker-background-selected.png */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
-		AEF9995C1E8C6D69006CFF5E /* TemplateCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9995B1E8C6D69006CFF5E /* TemplateCollectionViewController.m */; };
+		AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +74,8 @@
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF999511E8C2095006CFF5E /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		AEF9995A1E8C6D69006CFF5E /* TemplateCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCollectionViewController.h; sourceTree = "<group>"; };
-		AEF9995B1E8C6D69006CFF5E /* TemplateCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCollectionViewController.m; sourceTree = "<group>"; };
+		AEF9995D1E8D565A006CFF5E /* TemplateCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCollectionViewController.h; sourceTree = "<group>"; };
+		AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +134,8 @@
 				17213C641E8021B5000678DD /* HistoryViewController.h */,
 				17213C651E8021B5000678DD /* HistoryViewController.m */,
 				17213C661E8021B5000678DD /* ShareViewController.h */,
+				AEF9995D1E8D565A006CFF5E /* TemplateCollectionViewController.h */,
+				AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */,
 				17213C671E8021B5000678DD /* ShareViewController.m */,
 				941854251E75E1C800C1482D /* ViewController.m */,
 				941854241E75E1C800C1482D /* ViewController.h */,
@@ -143,8 +145,6 @@
 				9418543C1E76186500C1482D /* EditViewController.m */,
 				941854451E76264100C1482D /* FontViewController.h */,
 				941854461E76264100C1482D /* FontViewController.m */,
-				AEF9995A1E8C6D69006CFF5E /* TemplateCollectionViewController.h */,
-				AEF9995B1E8C6D69006CFF5E /* TemplateCollectionViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEF9995C1E8C6D69006CFF5E /* TemplateCollectionViewController.m in Sources */,
+				AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */,
 				941854411E761A7D00C1482D /* Picture.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
 				17213C681E8021B5000678DD /* HistoryViewController.m in Sources */,
