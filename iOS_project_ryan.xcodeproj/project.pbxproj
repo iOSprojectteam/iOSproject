@@ -32,6 +32,7 @@
 		941854621E7636F400C1482D /* sword-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854591E7636F400C1482D /* sword-png-16.png */; };
 		941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 941C7D031E8B451D00552BB6 /* sticker-background-selected.png */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
+		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,8 @@
 		941C7D031E8B451D00552BB6 /* sticker-background-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sticker-background-selected.png"; sourceTree = "<group>"; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		AEF787761E9DDB3200833CD3 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 				941854221E75E1C800C1482D /* AppDelegate.m */,
 				9418542F1E75E1C800C1482D /* Info.plist */,
 				9418542A1E75E1C800C1482D /* Assets.xcassets */,
+				AEF787751E9DDB3200833CD3 /* Store.h */,
+				AEF787761E9DDB3200833CD3 /* Store.m */,
 			);
 			name = "Special Classes";
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				941854411E761A7D00C1482D /* Picture.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
 				17213C681E8021B5000678DD /* HistoryViewController.m in Sources */,
+				AEF787771E9DDB3200833CD3 /* Store.m in Sources */,
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,
 				941854201E75E1C800C1482D /* main.m in Sources */,
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
