@@ -11,7 +11,7 @@
 @interface EditViewController (){
     // array of image names for stickers
     NSArray *stickerThumbs;
-    // array of selected stickers
+    // array of selected stickers..
     NSMutableArray *addedStickers;
 }
 @property (weak, nonatomic) IBOutlet UIView *containerViewA;
