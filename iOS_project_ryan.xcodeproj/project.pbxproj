@@ -33,6 +33,7 @@
 		941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 941C7D031E8B451D00552BB6 /* sticker-background-selected.png */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */; };
+		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,8 @@
 		AEF999511E8C2095006CFF5E /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		AEF9995D1E8D565A006CFF5E /* TemplateCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCollectionViewController.h; sourceTree = "<group>"; };
 		AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCollectionViewController.m; sourceTree = "<group>"; };
+		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		AEF787761E9DDB3200833CD3 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
