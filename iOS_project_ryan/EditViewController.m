@@ -48,8 +48,8 @@
 
     // Add the selected sticker into the array
     [addedStickers addObject:newSticker];
-    [[PictureProcessor sharedPictureProcessor] placeStickers:originalImage stickers:addedStickers];
-}
+    [self redraw];
+   }
 
 #pragma mark edit_view
 
@@ -68,7 +68,17 @@
     
     // Commence with processing!
     [PictureProcessor sharedPictureProcessor].delegate = self;
-    [[PictureProcessor sharedPictureProcessor] placeStickers:fixedImage stickers:addedStickers];
+    [self redraw];
+}
+
+-(void) redraw{
+    [[PictureProcessor sharedPictureProcessor] placeStickers:originalImage stickers:addedStickers];
+}
+
+-(IBAction)deleteSticker:(id)sender
+{
+    [addedStickers removeObject:addedStickers.lastObject];
+    [self redraw];
 }
 
 

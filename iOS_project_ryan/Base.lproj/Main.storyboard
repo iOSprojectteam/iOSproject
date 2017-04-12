@@ -117,7 +117,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Edit" id="KlT-nj-YUv">
-                                        <barButtonItem key="leftBarButtonItem" title="Delete Image" id="FOQ-Tg-bAv"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Save Image" id="FOQ-Tg-bAv">
+                                            <connections>
+                                                <action selector="savePhoto:" destination="pDP-rR-Hcl" id="xcB-zZ-v15"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Share" id="BQS-sT-Vzh"/>
                                     </navigationItem>
                                 </items>
@@ -418,6 +422,9 @@
                                 <rect key="frame" x="100" y="111" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete sticker from image"/>
+                                <connections>
+                                    <action selector="deleteSticker:" destination="chc-ap-NWV" eventType="touchUpInside" id="aYt-fN-PoL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
