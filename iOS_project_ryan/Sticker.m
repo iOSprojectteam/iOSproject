@@ -9,5 +9,25 @@
 #import "Sticker.h"
 
 @implementation Sticker
+@synthesize x, y, width, height, rotation, fileName;
+
+-(void) move: (NSInteger)offsetX y: (NSInteger)offsetY
+{
+    x = x + offsetX;
+    y = y + offsetY;
+}
+
+-(id)initWithData: (NSInteger *)posX Y:(NSInteger *)posY theWidth:(NSInteger *)w theHeight:(NSInteger *)h file:(NSString*)f
+{
+    if(self = [super init])
+    {
+        [self setX:posX];
+        [self setY:posY];
+        [self setWidth:w];
+        [self setWidth:h];
+        [self setFileName:f];
+    }
+    return self;
+}
 
 @end
