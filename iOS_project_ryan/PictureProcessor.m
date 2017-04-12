@@ -1,0 +1,131 @@
+//
+//  Picture.m
+//  iOS_project_ryan
+//
+//  Created by Galimova Galina on 2017-03-12.
+//  Copyright © 2017 Ryan Falcon. All rights reserved.
+//
+
+#import "PictureProcessor.h"
+
+@implementation PictureProcessor
+
++ (instancetype)sharedPictureProcessor {
+    static id sharedInstance = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    
+    return sharedInstance;
+}
+
+#pragma mark Public methods
+
+- (void)placeStickers:(UIImage*)inputPicture stickers:(NSMutableArray*)stickerList{
+    UIImage * outputPicture = [self processUsingCoreGraphics:inputPicture stickers:(NSMutableArray*)stickerList];
+    
+    if ([self.delegate respondsToSelector:
+         @selector(didFinishedPlacingStickers:)]) {
+        [self.delegate didFinishedPlacingStickers:outputPicture];
+    }
+}
+
+-(Sticker *)createStickerAtRandomPosition:(UIImage*)input name:(NSString *)stickerFileName {
+    
+    CGRect imageRect = {CGPointZero,input.size};
+    NSInteger inputWidth = CGRectGetWidth(imageRect);
+    NSInteger inputHeight = CGRectGetHeight(imageRect);
+    
+    // get the size and location of the sticker
+    UIImage * sticker = [UIImage imageNamed:stickerFileName];
+    
+    CGFloat stickerImageAspectRatio = sticker.size.width / sticker.size.height;
+    
+    NSInteger maxW = sticker.size.width ;
+    NSInteger maxH = sticker.size.height;
+    
+    // make sure the sticker size is so it fits in the picture
+    if (inputWidth < maxW) {
+        maxW = inputWidth;
+        maxH = maxW / stickerImageAspectRatio;
+        if (inputHeight < maxH){
+            maxH = inputHeight;
+            maxW = maxH * stickerImageAspectRatio;
+        }
+    } else if (inputHeight < maxH) {
+        maxH = inputHeight;
+        maxW = maxH * stickerImageAspectRatio;
+    }
+    
+    
+    // get a random scale
+    NSInteger minW = 5;
+    NSInteger w = arc4random_uniform(maxW - minW) + minW;
+    NSInteger h = w / stickerImageAspectRatio;
+    
+    // defina a range of possible locations so that it fits
+    int maxX = floor(inputWidth - w);
+    int maxY = floor(inputHeight - h);
+    
+    // get a random location
+    NSInteger x = arc4random_uniform(maxX);
+    NSInteger y = arc4random_uniform(maxY);
+    
+    Sticker *newSticker = [[Sticker alloc] initWithData:x Y:y theWidth:w theHeight:h file:stickerFileName];
+    return newSticker;
+}
+
+#pragma mark Private methods
+- (UIImage*) placeStickerOnImage:(UIImage*)input sticker:(Sticker*)s{
+    
+    CGRect imageRect = {CGPointZero,input.size};
+    NSInteger inputHeight = CGRectGetHeight(imageRect);
+    
+    // get the size and location of the sticker
+    UIImage * stickerImage = [UIImage imageNamed:s.fileName];
+
+    CGSize stickerSize = CGSizeMake((int)s.width, (int)s.height);
+    CGPoint stickerOrigin = CGPointMake((double)s.x, (double)s.y);
+    CGRect stickerRect = {stickerOrigin, stickerSize};
+    
+    // draw the image into the context
+    UIGraphicsBeginImageContext(input.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGAffineTransform flip = CGAffineTransformMakeScale(1.0, -1.0);
+    CGAffineTransform flipThenShift = CGAffineTransformTranslate(flip,0,-inputHeight);
+    CGContextConcatCTM(context, flipThenShift);
+    
+    CGContextDrawImage(context, imageRect, [input CGImage]);
+    
+    CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
+    CGContextSetAlpha(context,1);
+    CGRect transformedStickerRect = CGRectApplyAffineTransform(stickerRect, flipThenShift);
+    CGContextDrawImage(context, transformedStickerRect, [stickerImage CGImage]);
+    
+    // retrieve processed image
+    UIImage * imageWithSticker = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return imageWithSticker;
+}
+
+// Feature: Core Graphics usage
+- (UIImage *)processUsingCoreGraphics:(UIImage*)input stickers:(NSMutableArray*)stickerList {
+    
+    // place all stickers one by one
+    Sticker * s;
+    UIImage* currentImage = input;
+    for (s in stickerList) {
+        currentImage = [self placeStickerOnImage:currentImage sticker:s];
+    }
+    
+    return currentImage;
+}
+
+
+
+
+@end

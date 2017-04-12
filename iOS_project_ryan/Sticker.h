@@ -10,18 +10,21 @@
 
 @interface Sticker : NSObject
 {
-    NSInteger *x;
-    NSInteger *y;
-    NSInteger *width;
-    NSInteger *height;
-    NSInteger *rotation;
+    NSInteger x;
+    NSInteger y;
+    NSInteger width;
+    NSInteger height;
+    NSInteger rotation;
     NSString *fileName;
 }
 
-@property (nonatomic) NSInteger *x;
-@property (nonatomic) NSInteger *y;
-@property (nonatomic) NSInteger *width;
-@property (nonatomic) NSInteger *height;
-@property (nonatomic) NSInteger *rotation;
+@property (nonatomic) NSInteger x;
+@property (nonatomic) NSInteger y;
+@property (nonatomic) NSInteger width;
+@property (nonatomic) NSInteger height;
+@property (nonatomic) NSInteger rotation;
 @property (nonatomic, strong) NSString *fileName;
+
+-(id)initWithData: (NSInteger )posX Y:(NSInteger)posY theWidth:(NSInteger)w theHeight:(NSInteger)h file:(NSString*)f;
+
 @end

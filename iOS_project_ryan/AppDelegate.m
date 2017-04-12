@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Picture.h"
+#import "PictureProcessor.h"
 #import "Sticker.h"
 
 @interface AppDelegate ()
