@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -154,6 +154,7 @@
                     <connections>
                         <outlet property="containerViewA" destination="LOK-g5-f9T" id="xjb-s0-USb"/>
                         <outlet property="containerViewB" destination="bdC-f0-cSy" id="Y8a-bT-Nak"/>
+                        <outlet property="mainImageView" destination="Ul3-ZT-rFe" id="QnV-x9-emU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lF5-ID-U3W" userLabel="First Responder" sceneMemberID="firstResponder"/>

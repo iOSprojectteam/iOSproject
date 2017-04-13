@@ -17,7 +17,7 @@
 		9418542E1E75E1C800C1482D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9418542C1E75E1C800C1482D /* LaunchScreen.storyboard */; };
 		9418543A1E76185A00C1482D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854391E76185A00C1482D /* WebViewController.m */; };
 		9418543D1E76186500C1482D /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9418543C1E76186500C1482D /* EditViewController.m */; };
-		941854411E761A7D00C1482D /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854401E761A7D00C1482D /* Picture.m */; };
+		941854411E761A7D00C1482D /* PictureProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854401E761A7D00C1482D /* PictureProcessor.m */; };
 		941854441E761A9300C1482D /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854431E761A9300C1482D /* Sticker.m */; };
 		941854471E76264100C1482D /* FontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941854461E76264100C1482D /* FontViewController.m */; };
 		941854501E7636D800C1482D /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 9418544F1E7636D800C1482D /* person.png */; };
@@ -31,6 +31,11 @@
 		941854611E7636F400C1482D /* Star-PNG-Clipart.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854581E7636F400C1482D /* Star-PNG-Clipart.png */; };
 		941854621E7636F400C1482D /* sword-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 941854591E7636F400C1482D /* sword-png-16.png */; };
 		941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 941C7D031E8B451D00552BB6 /* sticker-background-selected.png */; };
+		94297AEC1E9E57DC008E127A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94297AEB1E9E57DC008E127A /* CoreGraphics.framework */; };
+		94297AEE1E9E57E2008E127A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94297AED1E9E57E2008E127A /* Foundation.framework */; };
+		94297AF01E9E5949008E127A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94297AEF1E9E5949008E127A /* UIKit.framework */; };
+		94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */; };
+		94297AF51E9E5FBA008E127A /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 94297AF41E9E5FBA008E127A /* ghost.png */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
 		AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */; };
@@ -55,8 +60,8 @@
 		941854391E76185A00C1482D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		9418543B1E76186500C1482D /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		9418543C1E76186500C1482D /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
-		9418543F1E761A7D00C1482D /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
-		941854401E761A7D00C1482D /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		9418543F1E761A7D00C1482D /* PictureProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureProcessor.h; sourceTree = "<group>"; };
+		941854401E761A7D00C1482D /* PictureProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureProcessor.m; sourceTree = "<group>"; };
 		941854421E761A9300C1482D /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		941854431E761A9300C1482D /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		941854451E76264100C1482D /* FontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontViewController.h; sourceTree = "<group>"; };
@@ -72,6 +77,12 @@
 		941854581E7636F400C1482D /* Star-PNG-Clipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-PNG-Clipart.png"; sourceTree = "<group>"; };
 		941854591E7636F400C1482D /* sword-png-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-png-16.png"; sourceTree = "<group>"; };
 		941C7D031E8B451D00552BB6 /* sticker-background-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sticker-background-selected.png"; sourceTree = "<group>"; };
+		94297AEB1E9E57DC008E127A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		94297AED1E9E57E2008E127A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		94297AEF1E9E5949008E127A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		94297AF11E9E5B11008E127A /* UIImage+OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OrientationFix.h"; sourceTree = "<group>"; };
+		94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OrientationFix.m"; sourceTree = "<group>"; };
+		94297AF41E9E5FBA008E127A /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
@@ -85,6 +96,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94297AF01E9E5949008E127A /* UIKit.framework in Frameworks */,
+				94297AEE1E9E57E2008E127A /* Foundation.framework in Frameworks */,
+				94297AEC1E9E57DC008E127A /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,7 @@
 			children = (
 				9418541D1E75E1C800C1482D /* iOS_project_ryan */,
 				9418541C1E75E1C800C1482D /* Products */,
+				94297AEA1E9E57DC008E127A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +180,8 @@
 			children = (
 				941854211E75E1C800C1482D /* AppDelegate.h */,
 				941854221E75E1C800C1482D /* AppDelegate.m */,
+				94297AF11E9E5B11008E127A /* UIImage+OrientationFix.h */,
+				94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */,
 				9418542F1E75E1C800C1482D /* Info.plist */,
 				9418542A1E75E1C800C1482D /* Assets.xcassets */,
 				AEF787751E9DDB3200833CD3 /* Store.h */,
@@ -176,8 +193,8 @@
 		9418543E1E761A2500C1482D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9418543F1E761A7D00C1482D /* Picture.h */,
-				941854401E761A7D00C1482D /* Picture.m */,
+				9418543F1E761A7D00C1482D /* PictureProcessor.h */,
+				941854401E761A7D00C1482D /* PictureProcessor.m */,
 				941854421E761A9300C1482D /* Sticker.h */,
 				941854431E761A9300C1482D /* Sticker.m */,
 			);
@@ -189,6 +206,7 @@
 			children = (
 				941854511E7636F400C1482D /* Funny-Face_Glasses.png */,
 				941854521E7636F400C1482D /* glass-tina-fey.png */,
+				94297AF41E9E5FBA008E127A /* ghost.png */,
 				941854531E7636F400C1482D /* glasses_pink.png */,
 				941854541E7636F400C1482D /* hammer_PNG3888.png */,
 				941C7D031E8B451D00552BB6 /* sticker-background-selected.png */,
@@ -200,6 +218,16 @@
 				9418544F1E7636D800C1482D /* person.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		94297AEA1E9E57DC008E127A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94297AEF1E9E5949008E127A /* UIKit.framework */,
+				94297AED1E9E57E2008E127A /* Foundation.framework */,
+				94297AEB1E9E57DC008E127A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9418545A1E7636F400C1482D /* Funny-Face_Glasses.png in Resources */,
+				94297AF51E9E5FBA008E127A /* ghost.png in Resources */,
 				9418545C1E7636F400C1482D /* glasses_pink.png in Resources */,
 				9418545F1E7636F400C1482D /* heart.png in Resources */,
 				941854501E7636D800C1482D /* person.png in Resources */,
@@ -293,6 +322,7 @@
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,
 				941854201E75E1C800C1482D /* main.m in Sources */,
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
+				94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */,
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
 				AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */,
 				9418543A1E76185A00C1482D /* WebViewController.m in Sources */,
