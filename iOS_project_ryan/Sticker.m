@@ -17,14 +17,14 @@
     y = y + offsetY;
 }
 
--(id)initWithData: (NSInteger *)posX Y:(NSInteger *)posY theWidth:(NSInteger *)w theHeight:(NSInteger *)h file:(NSString*)f
+-(id)initWithData: (NSInteger)posX Y:(NSInteger)posY theWidth:(NSInteger)w theHeight:(NSInteger)h file:(NSString*)f
 {
     if(self = [super init])
     {
         [self setX:posX];
         [self setY:posY];
         [self setWidth:w];
-        [self setWidth:h];
+        [self setHeight:h];
         [self setFileName:f];
     }
     return self;
