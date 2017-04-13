@@ -38,6 +38,7 @@
 		94297AF51E9E5FBA008E127A /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 94297AF41E9E5FBA008E127A /* ghost.png */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
+		AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF7877C1E9F2C0300833CD3 /* Label.m */; };
 		AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,8 @@
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		AEF787761E9DDB3200833CD3 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		AEF7877B1E9F2C0300833CD3 /* Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
+		AEF7877C1E9F2C0300833CD3 /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
 		AEF9995D1E8D565A006CFF5E /* TemplateCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCollectionViewController.h; sourceTree = "<group>"; };
 		AEF9995E1E8D565A006CFF5E /* TemplateCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +165,8 @@
 				9418543C1E76186500C1482D /* EditViewController.m */,
 				941854451E76264100C1482D /* FontViewController.h */,
 				941854461E76264100C1482D /* FontViewController.m */,
+				AEF7877B1E9F2C0300833CD3 /* Label.h */,
+				AEF7877C1E9F2C0300833CD3 /* Label.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -315,8 +320,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */,
-				941854411E761A7D00C1482D /* Picture.m in Sources */,
+				941854411E761A7D00C1482D /* PictureProcessor.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
+				AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */,
 				17213C681E8021B5000678DD /* HistoryViewController.m in Sources */,
 				AEF787771E9DDB3200833CD3 /* Store.m in Sources */,
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,

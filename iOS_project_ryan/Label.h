@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Label : NSObject
-{
+@interface Label : NSObject {
     NSString *font;
     NSNumber *fontSize;
     NSString *color;
@@ -25,4 +24,5 @@
 @property(nonatomic, strong)NSString *positioning;
 @property(nonatomic, strong)NSString *text;
 @property(nonatomic, strong)NSString *fontDecoration;
+
 @end
