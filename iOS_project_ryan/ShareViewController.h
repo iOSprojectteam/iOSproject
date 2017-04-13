@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ShareViewController : UIViewController
+@interface ShareViewController : UIViewController <MFMailComposeViewControllerDelegate>{
+    UIImageView *imageView;
+    UIImage *sendImage;
+}
 
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIImage *sendImage;
+-(IBAction)sendViaEmail:(id)sender;
 @end
