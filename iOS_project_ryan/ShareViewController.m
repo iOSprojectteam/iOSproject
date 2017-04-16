@@ -7,13 +7,14 @@
 //
 
 #import "ShareViewController.h"
+#import <Social/Social.h>
 
-@interface ShareViewController ()
+@interface ShareViewController () <MFMailComposeViewControllerDelegate>
 
 @end
 
 @implementation ShareViewController
-
+@synthesize sendImage, imageView, emailAd, personalMsg;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -24,6 +25,70 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)postMe:(id)sender{
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [fbPost setInitialText: personalMsg.text];
+        [fbPost setCompletionHandler:^(SLComposeViewControllerResult result){
+            if (result == SLComposeViewControllerResultCancelled) {
+                NSLog(@"User Cancelled-------------------------");
+            }else if(result == SLComposeViewControllerResultDone){
+                NSLog(@"User posted to fb----------------------");
+            }
+        }];
+        [self presentViewController:fbPost animated:YES completion:nil];
+    }else{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"YAYY" message:@"Failed" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:ok];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    
+}
+
+-(IBAction)sendViaEmail:(id)sender{
+
+    if (![MFMailComposeViewController canSendMail]) {
+        NSLog(@"Mail services are not available.");
+        return;
+    }
+    
+    MFMailComposeViewController* composeVC = [[MFMailComposeViewController alloc] init];
+    composeVC.mailComposeDelegate = self;
+    
+    // Configure the fields of the interface.
+    [composeVC setToRecipients:@[emailAd.text]];
+    [composeVC setSubject:@"Check this out!"];
+    [composeVC setMessageBody: personalMsg.text isHTML:NO];
+    
+    // Present the view controller modally.
+    [self presentViewController:composeVC animated:YES completion:nil];
+
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+        NSLog(@"Mail cancelled");
+        break;
+        case MFMailComposeResultSaved:
+        NSLog(@"Mail saved");
+        break;
+        case MFMailComposeResultSent:
+        NSLog(@"Mail sent");
+        break;
+        case MFMailComposeResultFailed:
+        NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+        break;
+        default:
+        break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 /*
 #pragma mark - Navigation
 

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryViewController : UIViewController
+@interface HistoryViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>{
 
+    NSArray *sampleAr;
+
+}
+@property (nonatomic, strong) NSArray *sampleAr;
+@property (nonatomic, strong) NSIndexPath *selectedItemIndexPath;
 @end
