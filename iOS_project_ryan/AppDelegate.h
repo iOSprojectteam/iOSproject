@@ -24,7 +24,8 @@
     NSMutableArray *addedStickers;
     // image taken from camera
     UIImage *originalImage;
-    
+    // History
+    NSMutableArray *pictureHistory;
 }
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *databaseName;
@@ -37,6 +38,7 @@
 @property (strong, nonatomic) NSMutableArray *addedLabels;
 @property (strong, nonatomic) NSMutableArray *addedStickers;
 @property (strong, nonatomic) UIImage *originalImage;
+@property (strong, nonatomic) NSMutableArray *pictureHistory;
 
 -(void)readDataFromDatabase;
 -(void)checkAndCreateDatabase;

@@ -15,7 +15,7 @@
 
 @implementation AppDelegate
 @synthesize databaseName, databasePath, imageTaken,
-labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, originalImage;
+labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, originalImage, pictureHistory;
 
 #pragma mark Database Methods
 
@@ -141,6 +141,7 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
     [self readDataFromDatabase];
     [self imageTaken];
 
+    self.pictureHistory = [[NSMutableArray alloc] init];
 
     return YES;
 }

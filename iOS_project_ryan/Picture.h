@@ -22,4 +22,5 @@
 @property (nonatomic, strong)  NSMutableArray *stkArray;
 @property (nonatomic, strong)  UIImage *renderedImg;
 
+-(id)initWithData:(UIImage *)img theLabels:(NSMutableArray *)l theStickers:(NSMutableArray *)s theRenderedImg:(UIImage *)r;
 @end

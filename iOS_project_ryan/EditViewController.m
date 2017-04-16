@@ -125,6 +125,9 @@
     
     //save to history
     Picture *p = [[Picture alloc] initWithData: mainDelegate.originalImage theLabels: mainDelegate.addedLabels theStickers:mainDelegate.addedStickers theRenderedImg: self.mainImageView.image];
+
+    [mainDelegate.pictureHistory addObject:p];
+
     
 }
 
