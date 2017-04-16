@@ -12,6 +12,7 @@
 #import "Sticker.h"
 #import "Label.h"
 #import "AppDelegate.h"
+#import "Picture.h"
 
 @interface EditViewController : UIViewController <UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, PictureProcessorDelegate>
 {

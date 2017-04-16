@@ -115,11 +115,17 @@
     return NO;
 }
 
+// save picture to history and to camera roll
 - (IBAction)savePhoto:(UIBarButtonItem *)sender {
     if (!self.mainImageView.image) {
         return;
     }
+    // save to camera roll
     UIImageWriteToSavedPhotosAlbum(self.mainImageView.image, nil, nil, nil);
+    
+    //save to history
+    Picture *p = [[Picture alloc] initWithData: mainDelegate.originalImage theLabels: mainDelegate.addedLabels theStickers:mainDelegate.addedStickers theRenderedImg: self.mainImageView.image];
+    
 }
 
 - (IBAction)addLabel:(id)sender {
