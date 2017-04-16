@@ -36,6 +36,7 @@
 		94297AF01E9E5949008E127A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94297AEF1E9E5949008E127A /* UIKit.framework */; };
 		94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */; };
 		94297AF51E9E5FBA008E127A /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 94297AF41E9E5FBA008E127A /* ghost.png */; };
+		AE6DC9DD1EA3F1D300F852A2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DC9DC1EA3F1D300F852A2 /* User.m */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
 		AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF7877C1E9F2C0300833CD3 /* Label.m */; };
@@ -84,6 +85,8 @@
 		94297AF11E9E5B11008E127A /* UIImage+OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OrientationFix.h"; sourceTree = "<group>"; };
 		94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OrientationFix.m"; sourceTree = "<group>"; };
 		94297AF41E9E5FBA008E127A /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
+		AE6DC9DB1EA3F1D300F852A2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		AE6DC9DC1EA3F1D300F852A2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				941854431E761A9300C1482D /* Sticker.m */,
 				AEF7877B1E9F2C0300833CD3 /* Label.h */,
 				AEF7877C1E9F2C0300833CD3 /* Label.m */,
+				AE6DC9DB1EA3F1D300F852A2 /* User.h */,
+				AE6DC9DC1EA3F1D300F852A2 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6DC9DD1EA3F1D300F852A2 /* User.m in Sources */,
 				AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */,
 				941854411E761A7D00C1482D /* PictureProcessor.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
