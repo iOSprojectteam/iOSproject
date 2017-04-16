@@ -14,9 +14,11 @@
 @end
 
 @implementation ShareViewController
-@synthesize sendImage, imageView, emailAd, personalMsg;
+@synthesize sendImage, imageView, emailAd, personalMsg, mainDelegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mainDelegate = (AppDelegate  *) [[UIApplication sharedApplication] delegate];
+    [imageView setImage:mainDelegate.selectedImg.renderedImg];
     // Do any additional setup after loading the view.
 }
 
