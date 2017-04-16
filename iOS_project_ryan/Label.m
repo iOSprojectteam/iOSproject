@@ -2,8 +2,8 @@
 //  Label.m
 //  iOS_project_ryan
 //
-//  Created by Xcode User on 2017-04-12.
-//  Copyright © 2017 Ryan Falcon. All rights reserved.
+//  Created by Bradley Zwarich on 2017-04-12.
+//  Copyright © 2017 Bradley Zwarich. All rights reserved.
 //
 
 #import "Label.h"

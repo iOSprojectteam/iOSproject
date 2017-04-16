@@ -3,7 +3,7 @@
 //  iOS_project_ryan
 //
 //  Created by Habibullah Ghazniwa on 2017-04-13.
-//  Copyright © 2017 Ryan Falcon. All rights reserved.
+//  Copyright © 2017 Habibullah Ghazniwa. All rights reserved.
 //
 
 #import "History.h"

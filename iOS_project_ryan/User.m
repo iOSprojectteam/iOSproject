@@ -2,7 +2,7 @@
 //  User.m
 //  FinalProject
 //
-//  Created by Xcode User on 2017-03-13.
+//  Created by Bradley Zwarich on 2017-03-13.
 //  Copyright © 2017 Bradley Zwarich. All rights reserved.
 //
 
