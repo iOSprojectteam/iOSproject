@@ -182,6 +182,8 @@
 				9418543C1E76186500C1482D /* EditViewController.m */,
 				941854451E76264100C1482D /* FontViewController.h */,
 				941854461E76264100C1482D /* FontViewController.m */,
+				AE6DC9DE1EA3F33100F852A2 /* CameraViewController.h */,
+				AE6DC9DF1EA3F33100F852A2 /* CameraViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -342,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6DC9DD1EA3F1D300F852A2 /* User.m in Sources */,
 				AEF9995F1E8D565A006CFF5E /* TemplateCollectionViewController.m in Sources */,
 				941854411E761A7D00C1482D /* PictureProcessor.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
@@ -352,6 +355,7 @@
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,
 				941854201E75E1C800C1482D /* main.m in Sources */,
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
+				AE6DC9E01EA3F33100F852A2 /* CameraViewController.m in Sources */,
 				94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */,
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
 				AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */,

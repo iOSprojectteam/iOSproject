@@ -7,19 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface UserViewController : UIViewController<UITextFieldDelegate>
+#import "User.h"
+@interface UserViewController : UIViewController<UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
+    // holds the avatar so that the user can be greeted with their ideal picture
     IBOutlet UIImageView *avatar;
+    // holds the name to use in the user class
     IBOutlet UITextField *name;
+    // holds the font to use for label class
     IBOutlet UITextField *favouriteFont;
+    // holds the color to use for the label class
     IBOutlet UITextField *favouriteColour;
-
+    // holds the avatar's picture
+    IBOutlet UIImageView *imageView;
+    
+    
 }
 @property(nonatomic, strong)IBOutlet UIImageView *avatar;
 @property(nonatomic, strong)IBOutlet UITextField *name;
 @property(nonatomic, strong)IBOutlet UITextField *favouriteFont;
 @property(nonatomic, strong)IBOutlet UITextField *favouriteColour;
-
+@property(nonatomic, strong) IBOutlet UIImageView *imageView;
 @end
 
