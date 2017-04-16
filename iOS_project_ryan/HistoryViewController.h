@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppDelegate.h"
 @interface HistoryViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>{
 
     NSArray *sampleAr;
+    AppDelegate *mainDelgate;
 
 }
 @property (nonatomic, strong) NSArray *sampleAr;
 @property (nonatomic, strong) NSIndexPath *selectedItemIndexPath;
+@property (nonatomic, strong) AppDelegate *mainDelgate;
 @end
