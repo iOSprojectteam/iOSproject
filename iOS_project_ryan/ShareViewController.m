@@ -55,16 +55,20 @@
         return;
     }
     
-    MFMailComposeViewController* composeVC = [[MFMailComposeViewController alloc] init];
-    composeVC.mailComposeDelegate = self;
+    MFMailComposeViewController* myMail = [[MFMailComposeViewController alloc] init];
+    myMail.mailComposeDelegate = self;
     
     // Configure the fields of the interface.
-    [composeVC setToRecipients:@[emailAd.text]];
-    [composeVC setSubject:@"Check this out!"];
-    [composeVC setMessageBody: personalMsg.text isHTML:NO];
+    
+    //NSData *myImg = mainDelegate.selectedImg.renderedImg;
+    NSData *imageData = UIImagePNGRepresentation(mainDelegate.selectedImg.renderedImg);
+    [myMail addAttachmentData:imageData mimeType:@"image/png" fileName:@"photo"];
+    [myMail setToRecipients:@[emailAd.text]];
+    [myMail setSubject:@"Check this out!"];
+    [myMail setMessageBody: personalMsg.text isHTML:NO];
     
     // Present the view controller modally.
-    [self presentViewController:composeVC animated:YES completion:nil];
+    [self presentViewController:myMail animated:YES completion:nil];
 
 }
 
@@ -91,6 +95,13 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+-(bool)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
 /*
 #pragma mark - Navigation
 
