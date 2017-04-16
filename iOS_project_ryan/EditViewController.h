@@ -30,4 +30,5 @@
 // array of selected stickers
 @property (strong, nonatomic) NSMutableArray *addedStickers;
 
+-(IBAction)deleteSticker:(id)sender;
 @end
