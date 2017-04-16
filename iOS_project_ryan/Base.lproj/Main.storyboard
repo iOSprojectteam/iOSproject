@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -785,7 +785,7 @@
                     <connections>
                         <outlet property="avatar" destination="3vx-9b-vVs" id="zoM-Vz-4wn"/>
                         <outlet property="favouriteColour" destination="IO7-ck-Y54" id="hGE-ij-gQ0"/>
-                        <outlet property="favouriteFont" destination="ONL-5b-ZpK" id="Zui-rb-xQp"/>
+                        <outlet property="favouriteSize" destination="ONL-5b-ZpK" id="WDp-l5-WmJ"/>
                         <outlet property="name" destination="nUy-VY-VgW" id="I3j-PS-L7m"/>
                     </connections>
                 </viewController>

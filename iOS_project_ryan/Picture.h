@@ -10,10 +10,14 @@
 #import <UIKit/UIKit.h>
 
 @interface Picture : NSObject{
-
+    
+    // original image from camera
     UIImage *mainImg;
+    // array of labels to apply
     NSMutableArray *lblArray;
+    // array of stickers to apply
     NSMutableArray *stkArray;
+    // rendered image with all stickers and labels applied
     UIImage *renderedImg;
 }
 

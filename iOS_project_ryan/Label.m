@@ -5,6 +5,7 @@
 //  Created by Bradley Zwarich on 2017-04-12.
 //  Copyright © 2017 Bradley Zwarich. All rights reserved.
 //
+// Contains the information that is needed to place a label on the picture
 
 #import "Label.h"
 

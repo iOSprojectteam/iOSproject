@@ -13,7 +13,7 @@
 @end
 
 @implementation HistoryViewController
-@synthesize sampleAr, mainDelgate, selectedPic;
+@synthesize mainDelgate, selectedPic;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return mainDelgate.pictureHistory.count;

@@ -5,6 +5,7 @@
 //  Created by Ryan Galimova on 2017-03-12.
 //  Copyright © 2017 Ryan Galimova. All rights reserved.
 //
+// Contains all the information that is needed to place a sticker on a picture
 
 #import "Sticker.h"
 

@@ -14,7 +14,7 @@
 @end
 
 @implementation UserViewController
-@synthesize avatar, name, favouriteFont, favouriteColour, imageView;
+@synthesize avatar, name, favouriteSize, favouriteColour, imageView, mainDelegate;
 
 
 
@@ -28,17 +28,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     //fill in the user defaults
     self.favouriteColour.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"colour"];
-    self.favouriteFont.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"font"];
+    self.favouriteSize.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"size"];
     self.name.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"name"];
     NSData* imageData = [[NSUserDefaults standardUserDefaults] objectForKey:@"avatar"];
     UIImage* imageInsert = [UIImage imageWithData:imageData];
     self.imageView.image = imageInsert;
     
-    
-}
+    }
 
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +53,7 @@
 {
     [[NSUserDefaults standardUserDefaults] setObject:self.favouriteColour.text forKey:@"colour"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [[NSUserDefaults standardUserDefaults] setObject:self.favouriteFont.text forKey:@"font"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.favouriteSize.text forKey:@"size"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[NSUserDefaults standardUserDefaults] setObject:self.name.text forKey:@"name"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -79,6 +79,9 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
     
+    mainDelegate.originalImage = chosenImage;
+
+
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
