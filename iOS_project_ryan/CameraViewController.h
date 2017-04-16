@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppDelegate.h"
 @interface CameraViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     //The image view is meant for holding the picture taken
     IBOutlet UIImageView *imageView;
+    AppDelegate *mainDelegate;
+
 }
 @property(nonatomic, strong) IBOutlet UIImageView *imageView;
-
+@property (nonatomic, strong) AppDelegate *mainDelegate;
 @end

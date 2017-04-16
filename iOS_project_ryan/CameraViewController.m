@@ -14,9 +14,10 @@
 @end
 
 @implementation CameraViewController
-@synthesize  imageView;
+@synthesize  imageView, mainDelegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     // Do any additional setup after loading the view.
 }
 
@@ -30,7 +31,7 @@
     
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    
+    mainDelegate.originalImage = chosenImage;
     self.imageView.image = chosenImage;
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [picker dismissViewControllerAnimated:YES completion:NULL];
