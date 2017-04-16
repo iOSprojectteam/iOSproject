@@ -484,6 +484,9 @@
                                 <state key="normal" title="Delete" backgroundImage="download.jpeg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteSelectedImg:" destination="3ul-aw-Elc" eventType="touchUpInside" id="yHE-ed-qYz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-sh-fvE">
                                 <rect key="frame" x="266" y="574" width="98" height="38"/>
@@ -526,8 +529,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToShare:" destination="3ul-aw-Elc" eventType="touchUpInside" id="N1g-AF-REo"/>
-                                    <segue destination="Uhp-yB-KYH" kind="presentation" id="hCA-WA-ZKI"/>
+                                    <segue destination="Uhp-yB-KYH" kind="presentation" id="Sfc-8X-eAQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqQ-eB-F72">
@@ -600,7 +602,7 @@
                                     <navigationItem title="Share" id="B2l-Qz-zdZ">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="xCA-wR-akg">
                                             <connections>
-                                                <segue destination="4in-o2-bal" kind="unwind" unwindAction="unwindToThisViewController:" id="qdG-iu-h5v"/>
+                                                <segue destination="4in-o2-bal" kind="unwind" unwindAction="unwindToThisHistoryController:" id="FJn-PR-Wyr"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -612,6 +614,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Uhp-yB-KYH" id="nc5-3f-zvQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4a-Ld-rRw">
                                 <rect key="frame" x="43" y="529" width="288" height="63"/>
@@ -645,6 +650,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Uhp-yB-KYH" id="pAH-mJ-PqG"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share via Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k36-fg-47m">
                                 <rect key="frame" x="30" y="231" width="158" height="21"/>
@@ -710,6 +718,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bYo-Gr-E9E" id="xf4-ww-tXf"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONL-5b-ZpK">
                                 <rect key="frame" x="26" y="172" width="297" height="30"/>
@@ -717,6 +728,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bYo-Gr-E9E" id="PZk-xd-206"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IO7-ck-Y54">
                                 <rect key="frame" x="26" y="254" width="296" height="30"/>
@@ -724,6 +738,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bYo-Gr-E9E" id="yeD-Sp-ME1"/>
+                                </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JJ-xZ-2I5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -891,9 +908,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qwZ-Y7-YVz"/>
+        <segue reference="mx0-Di-6tJ"/>
         <segue reference="Lok-32-MbG"/>
         <segue reference="ldw-So-BXX"/>
-        <segue reference="hCA-WA-ZKI"/>
-        <segue reference="6Ur-0d-BMO"/>
+        <segue reference="Sfc-8X-eAQ"/>
     </inferredMetricsTieBreakers>
 </document>

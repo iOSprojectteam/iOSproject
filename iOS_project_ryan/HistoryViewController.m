@@ -33,6 +33,10 @@
     return cell;
 }
 
+-(IBAction)unwindToThisHistoryController:(UIStoryboardSegue *)sender
+{
+    
+}
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     // Determine the selected sticker by using the indexPath
     // NSLog(@"%ld, %ld", (long)indexPath.section, (long)indexPath.row);
@@ -41,10 +45,13 @@
     
 }
 
--(IBAction)goToShare:(id)sender{
-    UIViewController *shareVC = [[UIViewController alloc] init];
-    [self.navigationController pushViewController:shareVC animated:YES];
+
+
+-(IBAction)deleteSelectedImg:(id)sender{
+    [mainDelgate.pictureHistory removeObject:selectedPic];
+    
 }
+
 
 
 
