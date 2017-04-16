@@ -11,7 +11,6 @@
 		17213C691E8021B5000678DD /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17213C671E8021B5000678DD /* ShareViewController.m */; };
 		17E4215B1E9F1740002E6640 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 17E4215A1E9F1740002E6640 /* download.jpeg */; };
 		17E4215D1E9F1DC7002E6640 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E4215C1E9F1DC7002E6640 /* Social.framework */; };
-		17E421601E9F335E002E6640 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4215F1E9F335E002E6640 /* History.m */; };
 		17E421621E9F4765002E6640 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E421611E9F4765002E6640 /* Messages.framework */; };
 		17E421641E9F476D002E6640 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E421631E9F476D002E6640 /* MessageUI.framework */; };
 		941854201E75E1C800C1482D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9418541F1E75E1C800C1482D /* main.m */; };
@@ -57,8 +56,6 @@
 		17213C671E8021B5000678DD /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		17E4215A1E9F1740002E6640 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 		17E4215C1E9F1DC7002E6640 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		17E4215E1E9F335E002E6640 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
-		17E4215F1E9F335E002E6640 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
 		17E421611E9F4765002E6640 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		17E421631E9F476D002E6640 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9418541B1E75E1C800C1482D /* iOS_project_ryan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_project_ryan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,8 +226,6 @@
 				AEF7877C1E9F2C0300833CD3 /* Label.m */,
 				94F4EFBC1EA3F7AB00DAD474 /* Picture.h */,
 				94F4EFBD1EA3F7AB00DAD474 /* Picture.m */,
-				17E4215E1E9F335E002E6640 /* History.h */,
-				17E4215F1E9F335E002E6640 /* History.m */,
 				AE6DC9DB1EA3F1D300F852A2 /* User.h */,
 				AE6DC9DC1EA3F1D300F852A2 /* User.m */,
 			);
@@ -357,7 +352,6 @@
 				941854411E761A7D00C1482D /* PictureProcessor.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
 				AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */,
-				17E421601E9F335E002E6640 /* History.m in Sources */,
 				17213C681E8021B5000678DD /* HistoryViewController.m in Sources */,
 				AEF787771E9DDB3200833CD3 /* Store.m in Sources */,
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,

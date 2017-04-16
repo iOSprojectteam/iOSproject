@@ -14,14 +14,14 @@
     // Name if for the user name to user later
     NSString *name;
     // Font is for the user's preferred font to use later
-    NSString *favouriteFont;
+    NSString *favouriteSize;
     // Colour is for user's preferred colour to use later
     NSString *favouriteColour;
     
 }
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *favouriteFont;
+@property (nonatomic, strong) NSString *favouriteSize;
 @property (nonatomic, strong) NSString *favouriteColour;
 
 

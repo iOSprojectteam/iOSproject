@@ -38,8 +38,7 @@
     UIImage* imageInsert = [UIImage imageWithData:imageData];
     self.imageView.image = imageInsert;
     
-    mainDelegate.originalImage = imageInsert;
-}
+    }
 
 
 - (void)didReceiveMemoryWarning {
@@ -80,6 +79,9 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
     
+    mainDelegate.originalImage = chosenImage;
+
+
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }

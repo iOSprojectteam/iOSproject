@@ -5,11 +5,13 @@
 //  Created by Ryan Galimova on 2017-03-12.
 //  Copyright © 2017 Ryan Galimova. All rights reserved.
 //
+//  This class takes an input image and combines it with stickers and labels to produce an output picture
 
 #import "PictureProcessor.h"
 
 @implementation PictureProcessor
 
+// This class is a singleton
 + (instancetype)sharedPictureProcessor {
     static id sharedInstance = nil;
     
@@ -23,6 +25,7 @@
 
 #pragma mark Public methods
 
+// Places stickers and labels on image and calls the callback (the protocol that the EditViewController implements)
 - (void)placeStickers:(UIImage*)inputPicture stickers:(NSMutableArray*)stickerList labels:(NSMutableArray*)labelList{
     UIImage * outputPicture = [self processUsingCoreGraphics:inputPicture stickers:(NSMutableArray*)stickerList labels:(NSMutableArray*)labelList];
     
@@ -32,6 +35,7 @@
     }
 }
 
+// creates a sticker with a random size and position for the given input image
 -(Sticker *)createStickerAtRandomPosition:(UIImage*)input name:(NSString *)stickerFileName {
     
     CGRect imageRect = {CGPointZero,input.size};
@@ -78,6 +82,7 @@
 }
 
 #pragma mark Private methods
+// Places a single sticker on the given image
 - (UIImage*) placeStickerOnImage:(UIImage*)input sticker:(Sticker*)s{
     
     CGRect imageRect = {CGPointZero,input.size};
@@ -112,6 +117,7 @@
     return imageWithSticker;
 }
 
+// places single label in the given image
 - (UIImage*) placeLabelOnImage:(UIImage*)input label:(Label*)l{
     
     UIGraphicsBeginImageContext(input.size);
@@ -141,6 +147,7 @@
 }
 
 // Feature: Core Graphics usage
+// iterates through all stickers and lables to be added and adds them one by one
 - (UIImage *)processUsingCoreGraphics:(UIImage*)input stickers:(NSMutableArray*)stickerList labels:(NSMutableArray*)labelList{
     
     // place all stickers one by one
