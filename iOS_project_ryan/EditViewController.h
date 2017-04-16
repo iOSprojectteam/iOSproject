@@ -19,9 +19,7 @@
     IBOutlet UIImageView *mainImageView;
     // array of image names for stickers
     NSArray *stickerThumbs;
-    // array of selected stickers
-    NSMutableArray *addedStickers;
-    UIImage *originalImage;
+
     AppDelegate *mainDelegate;
 
     
@@ -32,9 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerViewB;
 @property (strong, nonatomic) UIImage *originalImage;
 @property (strong, nonatomic) NSArray *stickerThumbs;
-//// array of selected stickers
-//@property (strong, nonatomic) NSMutableArray *addedStickers;
-//@property (strong, nonatomic) NSMutableArray *addedLabels;
+
 @property (nonatomic, strong) AppDelegate *mainDelegate;
 
 -(IBAction)deleteSticker:(id)sender;

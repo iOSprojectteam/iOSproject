@@ -15,7 +15,7 @@
 
 @implementation AppDelegate
 @synthesize databaseName, databasePath, imageTaken,
-labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers;
+labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, originalImage;
 
 #pragma mark Database Methods
 

@@ -14,7 +14,7 @@
 @end
 
 @implementation EditViewController
-@synthesize tfText, mainImageView, originalImage, stickerThumbs, mainDelegate;
+@synthesize tfText, mainImageView, stickerThumbs, mainDelegate;
 
 #pragma mark collection_view
 
@@ -43,7 +43,7 @@
     // NSLog(@"%ld, %ld", (long)indexPath.section, (long)indexPath.row);
     NSString *selectedSticker = [stickerThumbs objectAtIndex:indexPath.row];
 
-    Sticker *newSticker = [[PictureProcessor sharedPictureProcessor] createStickerAtRandomPosition:originalImage name:selectedSticker];
+    Sticker *newSticker = [[PictureProcessor sharedPictureProcessor] createStickerAtRandomPosition:mainDelegate.originalImage name:selectedSticker];
 
     // Add the selected sticker into the array
     [mainDelegate.addedStickers addObject:newSticker];
@@ -66,7 +66,7 @@
 
 - (void)setupWithImage:(UIImage*)image {
     UIImage * fixedImage = [image imageWithFixedOrientation];
-    self.originalImage = fixedImage;
+    mainDelegate.originalImage = fixedImage;
     self.mainImageView.image = fixedImage;
     
     // Commence with processing!
@@ -75,7 +75,7 @@
 }
 
 -(void) redraw{
-    [[PictureProcessor sharedPictureProcessor] placeStickers:originalImage stickers:mainDelegate.addedStickers labels:mainDelegate.addedLabels];
+    [[PictureProcessor sharedPictureProcessor] placeStickers:mainDelegate.originalImage stickers:mainDelegate.addedStickers labels:mainDelegate.addedLabels];
     
 }
 

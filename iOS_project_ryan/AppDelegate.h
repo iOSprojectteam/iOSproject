@@ -22,6 +22,8 @@
     // contains objects of Label and Sticker classes
     NSMutableArray *addedLabels;
     NSMutableArray *addedStickers;
+    // image taken from camera
+    UIImage *originalImage;
     
 }
 @property (strong, nonatomic) UIWindow *window;
@@ -34,6 +36,7 @@
 
 @property (strong, nonatomic) NSMutableArray *addedLabels;
 @property (strong, nonatomic) NSMutableArray *addedStickers;
+@property (strong, nonatomic) UIImage *originalImage;
 
 -(void)readDataFromDatabase;
 -(void)checkAndCreateDatabase;
