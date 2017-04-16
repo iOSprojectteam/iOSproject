@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		17213C681E8021B5000678DD /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17213C651E8021B5000678DD /* HistoryViewController.m */; };
 		17213C691E8021B5000678DD /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17213C671E8021B5000678DD /* ShareViewController.m */; };
+		17D349F01EA32686004FDC54 /* HistCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D349EF1EA32686004FDC54 /* HistCollectionVC.m */; };
 		17E4215B1E9F1740002E6640 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 17E4215A1E9F1740002E6640 /* download.jpeg */; };
 		17E4215D1E9F1DC7002E6640 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E4215C1E9F1DC7002E6640 /* Social.framework */; };
 		17E421601E9F335E002E6640 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4215F1E9F335E002E6640 /* History.m */; };
@@ -44,6 +45,8 @@
 		17213C661E8021B5000678DD /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		17213C671E8021B5000678DD /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		178652371E8CA239001940E6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		17D349EE1EA32686004FDC54 /* HistCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistCollectionVC.h; sourceTree = "<group>"; };
+		17D349EF1EA32686004FDC54 /* HistCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistCollectionVC.m; sourceTree = "<group>"; };
 		17E4215A1E9F1740002E6640 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 		17E4215C1E9F1DC7002E6640 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		17E4215E1E9F335E002E6640 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 				9418543C1E76186500C1482D /* EditViewController.m */,
 				941854451E76264100C1482D /* FontViewController.h */,
 				941854461E76264100C1482D /* FontViewController.m */,
+				17D349EE1EA32686004FDC54 /* HistCollectionVC.h */,
+				17D349EF1EA32686004FDC54 /* HistCollectionVC.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
 				AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */,
 				9418543A1E76185A00C1482D /* WebViewController.m in Sources */,
+				17D349F01EA32686004FDC54 /* HistCollectionVC.m in Sources */,
 				17213C691E8021B5000678DD /* ShareViewController.m in Sources */,
 				9418543D1E76186500C1482D /* EditViewController.m in Sources */,
 			);

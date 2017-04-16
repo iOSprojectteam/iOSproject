@@ -14,7 +14,7 @@
 @end
 
 @implementation ShareViewController
-@synthesize sendImage, imageView;
+@synthesize sendImage, imageView, emailAd, personalMsg;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -28,7 +28,7 @@
 -(IBAction)postMe:(id)sender{
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [fbPost setInitialText:@"Testing123"];
+        [fbPost setInitialText: personalMsg.text];
         [fbPost setCompletionHandler:^(SLComposeViewControllerResult result){
             if (result == SLComposeViewControllerResultCancelled) {
                 NSLog(@"User Cancelled-------------------------");
@@ -57,9 +57,9 @@
     composeVC.mailComposeDelegate = self;
     
     // Configure the fields of the interface.
-    [composeVC setToRecipients:@[@"address@example.com"]];
-    [composeVC setSubject:@"Hello!"];
-    [composeVC setMessageBody:@"Hello from California!" isHTML:NO];
+    [composeVC setToRecipients:@[emailAd.text]];
+    [composeVC setSubject:@"Check this out!"];
+    [composeVC setMessageBody: personalMsg.text isHTML:NO];
     
     // Present the view controller modally.
     [self presentViewController:composeVC animated:YES completion:nil];
