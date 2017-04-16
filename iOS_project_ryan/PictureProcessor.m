@@ -116,14 +116,21 @@
     
     UIGraphicsBeginImageContext(input.size);
     [input drawInRect:CGRectMake(0,0,input.size.width,input.size.height)];
-    
+    CGSize imageSize = input.size;
     CGPoint point = CGPointMake(0, 0);
-    CGRect rect = CGRectMake(point.x, point.y, input.size.width, input.size.height);
     
-    [[UIColor whiteColor] set];
-    
+    CGFloat paddingX = 20.f;
+    CGFloat paddingY = 20.f;
+
     UIFont *font = [UIFont boldSystemFontOfSize:12];
-    NSDictionary *att = @{NSFontAttributeName:font};
+    UIColor *textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+    //[[UIColor whiteColor] set];
+    NSDictionary *att = @{NSForegroundColorAttributeName: textColor, NSFontAttributeName:font};
+    CGSize textSize = [l.text sizeWithAttributes:att];
+
+    CGRect rect = CGRectMake(imageSize.width - textSize.width - paddingX, imageSize.height - textSize.height - paddingY, textSize.width, textSize.height);
+    //CGRect rect = CGRectMake(point.x, point.y, input.size.width, input.size.height);
+    
     [l.text drawInRect:rect withAttributes:att];
     
     UIImage *imageWithLabel = UIGraphicsGetImageFromCurrentImageContext();
