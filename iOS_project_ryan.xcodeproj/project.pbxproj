@@ -37,6 +37,7 @@
 		94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */; };
 		94297AF51E9E5FBA008E127A /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 94297AF41E9E5FBA008E127A /* ghost.png */; };
 		AE6DC9DD1EA3F1D300F852A2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DC9DC1EA3F1D300F852A2 /* User.m */; };
+		AE6DC9E01EA3F33100F852A2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DC9DF1EA3F33100F852A2 /* CameraViewController.m */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
 		AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF7877C1E9F2C0300833CD3 /* Label.m */; };
@@ -87,6 +88,8 @@
 		94297AF41E9E5FBA008E127A /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
 		AE6DC9DB1EA3F1D300F852A2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AE6DC9DC1EA3F1D300F852A2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AE6DC9DE1EA3F33100F852A2 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		AE6DC9DF1EA3F33100F852A2 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				9418543C1E76186500C1482D /* EditViewController.m */,
 				941854451E76264100C1482D /* FontViewController.h */,
 				941854461E76264100C1482D /* FontViewController.m */,
+				AE6DC9DE1EA3F33100F852A2 /* CameraViewController.h */,
+				AE6DC9DF1EA3F33100F852A2 /* CameraViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,
 				941854201E75E1C800C1482D /* main.m in Sources */,
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
+				AE6DC9E01EA3F33100F852A2 /* CameraViewController.m in Sources */,
 				94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */,
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
 				AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */,
