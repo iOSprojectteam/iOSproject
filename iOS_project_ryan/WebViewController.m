@@ -15,6 +15,11 @@
 @implementation WebViewController
 @synthesize  webView, activity;
 
+
+/**
+    Open stat
+ 
+ */
 -(void)webViewDidStartLoad:(UIWebView *) webView
 {
     [activity setHidden: NO];
