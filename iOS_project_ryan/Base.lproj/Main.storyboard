@@ -182,15 +182,18 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="History" id="Tml-Nq-YPl">
+                                    <barButtonItem title="Home" id="Tml-Nq-YPl">
                                         <connections>
                                             <segue destination="YKX-UL-mp9" kind="unwind" unwindAction="unwindToThisViewController:" id="Dhu-gM-Y0g"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WhA-NO-p1x"/>
-                                    <barButtonItem title="Photo" id="7eJ-bz-GUJ"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Dtj-xW-ITO"/>
-                                    <barButtonItem title="Settings" id="AJQ-IU-bgC"/>
+                                    <barButtonItem title="Photo" id="7eJ-bz-GUJ">
+                                        <connections>
+                                            <segue destination="2H0-7Q-zwS" kind="presentation" id="6Ur-0d-BMO"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-1E-Xmu">
@@ -481,6 +484,9 @@
                                 <state key="normal" title="Delete" backgroundImage="download.jpeg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteSelectedImg:" destination="3ul-aw-Elc" eventType="touchUpInside" id="yHE-ed-qYz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-sh-fvE">
                                 <rect key="frame" x="266" y="574" width="98" height="38"/>
@@ -489,6 +495,9 @@
                                 <state key="normal" title="Edit" backgroundImage="download.jpeg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pDP-rR-Hcl" kind="presentation" id="qwZ-Y7-YVz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJi-W5-bMw">
                                 <rect key="frame" x="7" y="620" width="98" height="38"/>
@@ -497,6 +506,9 @@
                                 <state key="normal" title="WebView" backgroundImage="download.jpeg">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="S54-wq-qmK" kind="presentation" id="Lok-32-MbG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-e3-81g">
                                 <rect key="frame" x="266" y="620" width="98" height="38"/>
@@ -505,6 +517,9 @@
                                 <state key="normal" title="My Profile" backgroundImage="download.jpeg">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bYo-Gr-E9E" kind="presentation" id="ldw-So-BXX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTZ-b7-ejt">
                                 <rect key="frame" x="138" y="574" width="98" height="38"/>
@@ -514,7 +529,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToShare:" destination="3ul-aw-Elc" eventType="touchUpInside" id="N1g-AF-REo"/>
+                                    <segue destination="Uhp-yB-KYH" kind="presentation" id="Sfc-8X-eAQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqQ-eB-F72">
@@ -524,6 +539,9 @@
                                 <state key="normal" title="Camera" backgroundImage="download.jpeg">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2H0-7Q-zwS" kind="presentation" id="mx0-Di-6tJ"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-lt-bLp">
                                 <rect key="frame" x="0.0" y="57" width="375" height="497"/>
@@ -584,7 +602,7 @@
                                     <navigationItem title="Share" id="B2l-Qz-zdZ">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="xCA-wR-akg">
                                             <connections>
-                                                <segue destination="4in-o2-bal" kind="unwind" unwindAction="unwindToThisViewController:" id="qdG-iu-h5v"/>
+                                                <segue destination="4in-o2-bal" kind="unwind" unwindAction="unwindToThisHistoryController:" id="FJn-PR-Wyr"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -596,6 +614,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Uhp-yB-KYH" id="nc5-3f-zvQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4a-Ld-rRw">
                                 <rect key="frame" x="43" y="529" width="288" height="63"/>
@@ -629,6 +650,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Uhp-yB-KYH" id="pAH-mJ-PqG"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share via Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k36-fg-47m">
                                 <rect key="frame" x="30" y="231" width="158" height="21"/>
@@ -694,6 +718,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bYo-Gr-E9E" id="xf4-ww-tXf"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONL-5b-ZpK">
                                 <rect key="frame" x="26" y="172" width="297" height="30"/>
@@ -701,6 +728,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bYo-Gr-E9E" id="PZk-xd-206"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IO7-ck-Y54">
                                 <rect key="frame" x="26" y="254" width="296" height="30"/>
@@ -708,6 +738,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bYo-Gr-E9E" id="yeD-Sp-ME1"/>
+                                </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JJ-xZ-2I5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -874,6 +907,10 @@
         <image name="person.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c1R-SE-j2z"/>
+        <segue reference="qwZ-Y7-YVz"/>
+        <segue reference="mx0-Di-6tJ"/>
+        <segue reference="Lok-32-MbG"/>
+        <segue reference="ldw-So-BXX"/>
+        <segue reference="Sfc-8X-eAQ"/>
     </inferredMetricsTieBreakers>
 </document>
