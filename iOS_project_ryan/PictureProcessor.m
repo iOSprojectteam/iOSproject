@@ -23,8 +23,8 @@
 
 #pragma mark Public methods
 
-- (void)placeStickers:(UIImage*)inputPicture stickers:(NSMutableArray*)stickerList{
-    UIImage * outputPicture = [self processUsingCoreGraphics:inputPicture stickers:(NSMutableArray*)stickerList];
+- (void)placeStickers:(UIImage*)inputPicture stickers:(NSMutableArray*)stickerList labels:(NSMutableArray*)labelList{
+    UIImage * outputPicture = [self processUsingCoreGraphics:inputPicture stickers:(NSMutableArray*)stickerList labels:(NSMutableArray*)labelList];
     
     if ([self.delegate respondsToSelector:
          @selector(didFinishedPlacingStickers:)]) {
@@ -112,14 +112,40 @@
     return imageWithSticker;
 }
 
+- (UIImage*) placeLabelOnImage:(UIImage*)input label:(Label*)l{
+    
+    UIGraphicsBeginImageContext(input.size);
+    [input drawInRect:CGRectMake(0,0,input.size.width,input.size.height)];
+    
+    CGPoint point = CGPointMake(0, 0);
+    CGRect rect = CGRectMake(point.x, point.y, input.size.width, input.size.height);
+    
+    [[UIColor whiteColor] set];
+    
+    UIFont *font = [UIFont boldSystemFontOfSize:12];
+    NSDictionary *att = @{NSFontAttributeName:font};
+    [l.text drawInRect:rect withAttributes:att];
+    
+    UIImage *imageWithLabel = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return imageWithLabel;
+    
+}
+
 // Feature: Core Graphics usage
-- (UIImage *)processUsingCoreGraphics:(UIImage*)input stickers:(NSMutableArray*)stickerList {
+- (UIImage *)processUsingCoreGraphics:(UIImage*)input stickers:(NSMutableArray*)stickerList labels:(NSMutableArray*)labelList{
     
     // place all stickers one by one
     Sticker * s;
     UIImage* currentImage = input;
     for (s in stickerList) {
         currentImage = [self placeStickerOnImage:currentImage sticker:s];
+    }
+    
+    Label * l;
+    for (l in labelList) {
+        currentImage = [self placeLabelOnImage:currentImage label:l];
     }
     
     return currentImage;

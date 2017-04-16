@@ -9,19 +9,29 @@
 #import "Label.h"
 
 @implementation Label
-@synthesize font, fontSize, fontDecoration, color, positioning, text;
+@synthesize font, fontSize, fontDecoration, color, x, y, text;
 
--(id)initWIthData:(NSString *)fontt theColor:(NSString *)colorr theText:(NSString *)textt theSize:(NSNumber *)size theDecoration: (NSString *)decoration thePositioning:(NSString *)positioningg
+-(id)initWithData:(NSString *)f theColor:(NSString *)c theText:(NSString *)t theSize:(NSNumber *)s theDecoration: (NSString *)d X:(NSInteger)posX Y:(NSInteger)posY
 {
     if (self = [super init])
     {
-        [self setFont:fontt];
-        [self setColor:colorr];
-        [self setText:textt];
-        [self setFontSize:size];
-        [self setFontDecoration:decoration];
-        [self setPositioning:positioningg];
+        [self setFont:f];
+        [self setColor:c];
+        [self setText:t];
+        [self setFontSize:s];
+        [self setFontDecoration:d];
+        [self setX:posX];
+        [self setY:posY];
         
+    }
+    return self;
+}
+
+-(id)initWithText:(NSString *)t
+{
+    if (self = [super init])
+    {
+        [self setText:t];
     }
     return self;
 }

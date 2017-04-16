@@ -10,6 +10,8 @@
 #import "PictureProcessor.h"
 #import "UIImage+OrientationFix.h"
 #import "Sticker.h"
+#import "Label.h"
+#import "AppDelegate.h"
 
 @interface EditViewController : UIViewController <UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, PictureProcessorDelegate>
 {
@@ -20,6 +22,9 @@
     // array of selected stickers
     NSMutableArray *addedStickers;
     UIImage *originalImage;
+    AppDelegate *mainDelegate;
+
+    
 }
 @property (nonatomic, strong) IBOutlet UITextField *tfText;
 @property (nonatomic, strong) IBOutlet UIImageView *mainImageView;
@@ -27,8 +32,10 @@
 @property (weak, nonatomic) IBOutlet UIView *containerViewB;
 @property (strong, nonatomic) UIImage *originalImage;
 @property (strong, nonatomic) NSArray *stickerThumbs;
-// array of selected stickers
-@property (strong, nonatomic) NSMutableArray *addedStickers;
+//// array of selected stickers
+//@property (strong, nonatomic) NSMutableArray *addedStickers;
+//@property (strong, nonatomic) NSMutableArray *addedLabels;
+@property (nonatomic, strong) AppDelegate *mainDelegate;
 
 -(IBAction)deleteSticker:(id)sender;
 @end

@@ -14,7 +14,7 @@
 @end
 
 @implementation EditViewController
-@synthesize tfText, mainImageView, originalImage, stickerThumbs, addedStickers;
+@synthesize tfText, mainImageView, originalImage, stickerThumbs, mainDelegate;
 
 #pragma mark collection_view
 
@@ -46,7 +46,7 @@
     Sticker *newSticker = [[PictureProcessor sharedPictureProcessor] createStickerAtRandomPosition:originalImage name:selectedSticker];
 
     // Add the selected sticker into the array
-    [addedStickers addObject:newSticker];
+    [mainDelegate.addedStickers addObject:newSticker];
     [self redraw];
 }
 
@@ -54,8 +54,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     // Do any additional setup after loading the view.
-    addedStickers = [NSMutableArray array];
+    mainDelegate.addedStickers = [NSMutableArray array];
+    mainDelegate.addedLabels = [NSMutableArray array];
+
     stickerThumbs = [NSArray arrayWithObjects:@"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"person.png", nil];
     [self setupWithImage: [UIImage imageNamed:@"person.png"]];
 }
@@ -71,12 +75,13 @@
 }
 
 -(void) redraw{
-    [[PictureProcessor sharedPictureProcessor] placeStickers:originalImage stickers:addedStickers];
+    [[PictureProcessor sharedPictureProcessor] placeStickers:originalImage stickers:mainDelegate.addedStickers labels:mainDelegate.addedLabels];
+    
 }
 
 -(IBAction)deleteSticker:(id)sender
 {
-    [addedStickers removeObject:addedStickers.lastObject];
+    [mainDelegate.addedStickers removeObject:mainDelegate.addedStickers.lastObject];
     [self redraw];
 }
 
@@ -115,6 +120,20 @@
         return;
     }
     UIImageWriteToSavedPhotosAlbum(self.mainImageView.image, nil, nil, nil);
+}
+
+- (IBAction)addLabel:(id)sender {
+    Label *newLabel = [[Label alloc] initWithText: tfText.text];
+    [mainDelegate.addedLabels addObject:newLabel];
+    [tfText setText:@""];
+    [self redraw];
+
+}
+
+- (IBAction)deleteLabel:(id)sender {
+    [mainDelegate.addedLabels removeObject:mainDelegate.addedLabels.lastObject];
+    [self redraw];
+
 }
 
 #pragma mark Protocol Conformance

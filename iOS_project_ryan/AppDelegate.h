@@ -19,6 +19,10 @@
     NSMutableArray *stickersArray;
     NSMutableArray *linksSharedArray;
     
+    // contains objects of Label and Sticker classes
+    NSMutableArray *addedLabels;
+    NSMutableArray *addedStickers;
+    
 }
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *databaseName;
@@ -27,6 +31,9 @@
 @property (strong, nonatomic) NSMutableArray *labelsArray;
 @property (strong, nonatomic) NSMutableArray *stickersArray;
 @property (strong, nonatomic) NSMutableArray *linksSharedArray;
+
+@property (strong, nonatomic) NSMutableArray *addedLabels;
+@property (strong, nonatomic) NSMutableArray *addedStickers;
 
 -(void)readDataFromDatabase;
 -(void)checkAndCreateDatabase;

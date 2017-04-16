@@ -165,8 +165,6 @@
 				9418543C1E76186500C1482D /* EditViewController.m */,
 				941854451E76264100C1482D /* FontViewController.h */,
 				941854461E76264100C1482D /* FontViewController.m */,
-				AEF7877B1E9F2C0300833CD3 /* Label.h */,
-				AEF7877C1E9F2C0300833CD3 /* Label.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -202,6 +200,8 @@
 				941854401E761A7D00C1482D /* PictureProcessor.m */,
 				941854421E761A9300C1482D /* Sticker.h */,
 				941854431E761A9300C1482D /* Sticker.m */,
+				AEF7877B1E9F2C0300833CD3 /* Label.h */,
+				AEF7877C1E9F2C0300833CD3 /* Label.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";

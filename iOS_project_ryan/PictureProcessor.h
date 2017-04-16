@@ -10,6 +10,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #include <stdlib.h>
 #import "Sticker.h"
+#import "Label.h"
 
 // Feature: protocol
 @protocol PictureProcessorDelegate <NSObject>
@@ -25,6 +26,6 @@
 + (instancetype)sharedPictureProcessor;
 
 // public methods
-- (void)placeStickers:(UIImage*)inputPicture stickers:(NSMutableArray*)stickerList;
+- (void)placeStickers:(UIImage*)inputPicture stickers:(NSMutableArray*)stickerList labels:(NSMutableArray*)labelList;
 -(Sticker *)createStickerAtRandomPosition:(UIImage*)input name:(NSString *)stickerFileName;
 @end
