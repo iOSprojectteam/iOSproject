@@ -16,7 +16,9 @@
 @implementation UserViewController
 @synthesize avatar, name, favouriteSize, favouriteColour, imageView, mainDelegate;
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+
+
+-(bool)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return NO;
