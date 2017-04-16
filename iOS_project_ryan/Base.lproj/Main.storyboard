@@ -667,14 +667,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="78" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTB-ke-zR5">
-                                                    <rect key="frame" x="-81" y="-30" width="240" height="128"/>
+                                                <imageView userInteractionEnabled="NO" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTB-ke-zR5">
+                                                    <rect key="frame" x="2" y="2" width="78" height="78"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="3ul-aw-Elc" id="EYs-FI-eiN"/>
+                                    <outlet property="delegate" destination="3ul-aw-Elc" id="Jko-LO-QOS"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -889,6 +893,10 @@
         <scene sceneID="Oyq-Sf-zHR">
             <objects>
                 <viewController id="hDe-7v-SmC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gto-mA-EC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="yuq-DG-6xS"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CpQ-1x-sbd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
