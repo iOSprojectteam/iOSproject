@@ -2,8 +2,8 @@
 //  EditViewController.m
 //  iOS_project_ryan
 //
-//  Created by Galimova Galina on 2017-03-12.
-//  Copyright © 2017 Ryan Falcon. All rights reserved.
+//  Created by Ryan Galimova on 2017-03-12.
+//  Copyright © 2017 Ryan Galimova. All rights reserved.
 //
 
 #import "EditViewController.h"
@@ -61,7 +61,10 @@
     mainDelegate.addedLabels = [NSMutableArray array];
 
     stickerThumbs = [NSArray arrayWithObjects:@"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"person.png", nil];
-    [self setupWithImage: [UIImage imageNamed:@"person.png"]];
+    if (mainDelegate.originalImage == NULL)
+        [self setupWithImage: [UIImage imageNamed:@"person.png"]];
+    else
+        [self setupWithImage:mainDelegate.originalImage];
 }
 
 - (void)setupWithImage:(UIImage*)image {

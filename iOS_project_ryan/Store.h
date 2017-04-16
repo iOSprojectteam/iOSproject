@@ -2,8 +2,8 @@
 //  Store.h
 //  iOS_project_ryan
 //
-//  Created by Xcode User on 2017-04-11.
-//  Copyright © 2017 Ryan Falcon. All rights reserved.
+//  Created by Charles Javelona on 2017-04-11.
+//  Copyright © 2017 Charles Javelona. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
