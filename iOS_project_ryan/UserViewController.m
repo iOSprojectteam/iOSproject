@@ -33,6 +33,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+    Save into user defaults the data that was passed
+*/
 -(IBAction)savePreferences
 {
     [[NSUserDefaults standardUserDefaults] setObject:self.favouriteColour.text forKey:@"colour"];
