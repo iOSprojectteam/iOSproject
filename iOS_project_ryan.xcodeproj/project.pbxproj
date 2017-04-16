@@ -218,6 +218,8 @@
 				AEF7877C1E9F2C0300833CD3 /* Label.m */,
 				17E4215E1E9F335E002E6640 /* History.h */,
 				17E4215F1E9F335E002E6640 /* History.m */,
+				17E2DA6A1EA3EFC500E5B9EF /* Picture.h */,
+				17E2DA6B1EA3EFC500E5B9EF /* Picture.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -349,6 +351,7 @@
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
 				94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */,
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
+				17E2DA6C1EA3EFC500E5B9EF /* Picture.m in Sources */,
 				AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */,
 				9418543A1E76185A00C1482D /* WebViewController.m in Sources */,
 				17213C691E8021B5000678DD /* ShareViewController.m in Sources */,
