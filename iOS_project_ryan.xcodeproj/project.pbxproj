@@ -41,6 +41,7 @@
 		94297AF01E9E5949008E127A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94297AEF1E9E5949008E127A /* UIKit.framework */; };
 		94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */; };
 		94297AF51E9E5FBA008E127A /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 94297AF41E9E5FBA008E127A /* ghost.png */; };
+		94F4EFBE1EA3F7AB00DAD474 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EFBD1EA3F7AB00DAD474 /* Picture.m */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
 		AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF7877C1E9F2C0300833CD3 /* Label.m */; };
@@ -95,6 +96,8 @@
 		94297AF11E9E5B11008E127A /* UIImage+OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OrientationFix.h"; sourceTree = "<group>"; };
 		94297AF21E9E5B11008E127A /* UIImage+OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OrientationFix.m"; sourceTree = "<group>"; };
 		94297AF41E9E5FBA008E127A /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
+		94F4EFBC1EA3F7AB00DAD474 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		94F4EFBD1EA3F7AB00DAD474 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
@@ -216,10 +219,10 @@
 				941854431E761A9300C1482D /* Sticker.m */,
 				AEF7877B1E9F2C0300833CD3 /* Label.h */,
 				AEF7877C1E9F2C0300833CD3 /* Label.m */,
+				94F4EFBC1EA3F7AB00DAD474 /* Picture.h */,
+				94F4EFBD1EA3F7AB00DAD474 /* Picture.m */,
 				17E4215E1E9F335E002E6640 /* History.h */,
 				17E4215F1E9F335E002E6640 /* History.m */,
-				17E2DA6A1EA3EFC500E5B9EF /* Picture.h */,
-				17E2DA6B1EA3EFC500E5B9EF /* Picture.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -351,11 +354,11 @@
 				941854441E761A9300C1482D /* Sticker.m in Sources */,
 				94297AF31E9E5B11008E127A /* UIImage+OrientationFix.m in Sources */,
 				941854471E76264100C1482D /* FontViewController.m in Sources */,
-				17E2DA6C1EA3EFC500E5B9EF /* Picture.m in Sources */,
 				AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */,
 				9418543A1E76185A00C1482D /* WebViewController.m in Sources */,
 				17213C691E8021B5000678DD /* ShareViewController.m in Sources */,
 				9418543D1E76186500C1482D /* EditViewController.m in Sources */,
+				94F4EFBE1EA3F7AB00DAD474 /* Picture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
