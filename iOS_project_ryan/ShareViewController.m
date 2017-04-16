@@ -30,6 +30,7 @@
 -(IBAction)postMe:(id)sender{
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [fbPost addImage:mainDelegate.selectedImg.renderedImg];
         [fbPost setInitialText: personalMsg.text];
         [fbPost setCompletionHandler:^(SLComposeViewControllerResult result){
             if (result == SLComposeViewControllerResultCancelled) {
