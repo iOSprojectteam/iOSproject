@@ -117,6 +117,9 @@
 				94297AF01E9E5949008E127A /* UIKit.framework in Frameworks */,
 				94297AEE1E9E57E2008E127A /* Foundation.framework in Frameworks */,
 				94297AEC1E9E57DC008E127A /* CoreGraphics.framework in Frameworks */,
+				17E421641E9F476D002E6640 /* MessageUI.framework in Frameworks */,
+				17E421621E9F4765002E6640 /* Messages.framework in Frameworks */,
+				17E4215D1E9F1DC7002E6640 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +233,8 @@
 				941854431E761A9300C1482D /* Sticker.m */,
 				AEF7877B1E9F2C0300833CD3 /* Label.h */,
 				AEF7877C1E9F2C0300833CD3 /* Label.m */,
+				17E4215E1E9F335E002E6640 /* History.h */,
+				17E4215F1E9F335E002E6640 /* History.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				941854411E761A7D00C1482D /* PictureProcessor.m in Sources */,
 				941854261E75E1C800C1482D /* ViewController.m in Sources */,
 				AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */,
+				17E421601E9F335E002E6640 /* History.m in Sources */,
 				17213C681E8021B5000678DD /* HistoryViewController.m in Sources */,
 				AEF787771E9DDB3200833CD3 /* Store.m in Sources */,
 				941854231E75E1C800C1482D /* AppDelegate.m in Sources */,

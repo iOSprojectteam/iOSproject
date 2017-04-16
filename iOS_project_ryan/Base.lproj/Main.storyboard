@@ -828,6 +828,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Funny-Face_Glasses.png" width="1096" height="835"/>
+        <image name="Star-PNG-Clipart.png" width="2677" height="1567"/>
+        <image name="download.jpeg" width="353" height="143"/>
+        <image name="glass-tina-fey.png" width="580" height="350"/>
+        <image name="glasses_pink.png" width="1844" height="637"/>
+        <image name="hammer_PNG3888.png" width="2784" height="2910"/>
+        <image name="hat.png" width="640" height="391"/>
+        <image name="heart.png" width="1260" height="994"/>
         <image name="person.png" width="300" height="300"/>
     </resources>
 </document>
