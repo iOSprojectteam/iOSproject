@@ -36,7 +36,6 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
 }
 
 -(BOOL)insertIntoDatabase:(User *)person {
-    /*
     
     sqlite3 *database;
     BOOL returnCode = YES;
@@ -48,7 +47,7 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
         
         if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
             sqlite3_bind_text(compiledStatement, 1, [person.name UTF8String], -1,SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 2, [person.favouriteFont UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 2, [person.favouriteSize UTF8String], -1, SQLITE_TRANSIENT);
             sqlite3_bind_text(compiledStatement, 3, [person.favouriteColour UTF8String], -1, SQLITE_TRANSIENT);
             
         }
@@ -67,8 +66,7 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
     
     sqlite3_close(database);
     return returnCode;
-    */
-     return YES;
+    return YES;
 
     
 }
@@ -128,7 +126,7 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.databaseName = @"database.db";
+    self.databaseName = @"app.db";
     self.labelsArray = [[NSMutableArray alloc] init];
     self.stickersArray = [[NSMutableArray alloc] init];
     self.linksSharedArray = [[NSMutableArray alloc] init];

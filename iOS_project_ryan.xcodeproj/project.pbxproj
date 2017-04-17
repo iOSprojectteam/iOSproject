@@ -43,6 +43,9 @@
 		94F4EFBE1EA3F7AB00DAD474 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EFBD1EA3F7AB00DAD474 /* Picture.m */; };
 		AE6DC9DD1EA3F1D300F852A2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DC9DC1EA3F1D300F852A2 /* User.m */; };
 		AE6DC9E01EA3F33100F852A2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DC9DF1EA3F33100F852A2 /* CameraViewController.m */; };
+		AED67DE21EA50AD30069C879 /* app.db in Resources */ = {isa = PBXBuildFile; fileRef = AED67DE11EA50AD30069C879 /* app.db */; };
+		AED67DE51EA50B1A0069C879 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AED67DE31EA50B1A0069C879 /* libsqlite3.0.tbd */; };
+		AED67DE61EA50B1A0069C879 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AED67DE41EA50B1A0069C879 /* libsqlite3.tbd */; };
 		AEDE6A3A1E802896004E3015 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE6A391E802896004E3015 /* UserViewController.m */; };
 		AEF787771E9DDB3200833CD3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF787761E9DDB3200833CD3 /* Store.m */; };
 		AEF7877D1E9F2C0300833CD3 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF7877C1E9F2C0300833CD3 /* Label.m */; };
@@ -101,6 +104,9 @@
 		AE6DC9DC1EA3F1D300F852A2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		AE6DC9DE1EA3F33100F852A2 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		AE6DC9DF1EA3F33100F852A2 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		AED67DE11EA50AD30069C879 /* app.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = app.db; sourceTree = "<group>"; };
+		AED67DE31EA50B1A0069C879 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AED67DE41EA50B1A0069C879 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		AEDE6A381E802896004E3015 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AEDE6A391E802896004E3015 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AEF787751E9DDB3200833CD3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
@@ -116,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED67DE51EA50B1A0069C879 /* libsqlite3.0.tbd in Frameworks */,
+				AED67DE61EA50B1A0069C879 /* libsqlite3.tbd in Frameworks */,
 				94297AF01E9E5949008E127A /* UIKit.framework in Frameworks */,
 				94297AEE1E9E57E2008E127A /* Foundation.framework in Frameworks */,
 				94297AEC1E9E57DC008E127A /* CoreGraphics.framework in Frameworks */,
@@ -148,6 +156,7 @@
 		9418541D1E75E1C800C1482D /* iOS_project_ryan */ = {
 			isa = PBXGroup;
 			children = (
+				AED67DE11EA50AD30069C879 /* app.db */,
 				9418544E1E7636BE00C1482D /* Images */,
 				9418543E1E761A2500C1482D /* Model */,
 				941854371E76181A00C1482D /* Special Classes */,
@@ -255,6 +264,8 @@
 		94297AEA1E9E57DC008E127A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AED67DE31EA50B1A0069C879 /* libsqlite3.0.tbd */,
+				AED67DE41EA50B1A0069C879 /* libsqlite3.tbd */,
 				94297AEF1E9E5949008E127A /* UIKit.framework */,
 				94297AED1E9E57E2008E127A /* Foundation.framework */,
 				94297AEB1E9E57DC008E127A /* CoreGraphics.framework */,
@@ -326,6 +337,7 @@
 				9418545C1E7636F400C1482D /* glasses_pink.png in Resources */,
 				9418545F1E7636F400C1482D /* heart.png in Resources */,
 				941854501E7636D800C1482D /* person.png in Resources */,
+				AED67DE21EA50AD30069C879 /* app.db in Resources */,
 				941854601E7636F400C1482D /* sparkle.png in Resources */,
 				9418542E1E75E1C800C1482D /* LaunchScreen.storyboard in Resources */,
 				941C7D041E8B451D00552BB6 /* sticker-background-selected.png in Resources */,

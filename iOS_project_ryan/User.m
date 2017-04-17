@@ -11,7 +11,7 @@
 
 @implementation User
 @synthesize name, favouriteSize, favouriteColour;
--(id)initWIthData:(NSString *)n theSize:(NSString *)f theColour:(NSString *)c
+-(id)initWithData:(NSString *)n theFont:(NSString *)f theColour:(NSString *)c
 {
     
     if (self = [super init])

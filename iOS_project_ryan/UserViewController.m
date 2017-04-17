@@ -9,6 +9,8 @@
 
 #import "UserViewController.h"
 
+
+
 @interface UserViewController ()
 
 @end
@@ -60,6 +62,28 @@
     // I believe this isn't ideal to do, as plist doesn't seem it's meant for storing pictures, but I wasn't sure what the best alternative was
     [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(imageView.image) forKey:@"avatar"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    User *person = [[User alloc] initWithData:self.name.text theFont:self.favouriteSize.text theColour:self.favouriteColour.text];
+
+  
+    
+    BOOL returnCode = [mainDelegate insertIntoDatabase:person];
+    
+    NSString *returnMsg = @"Person Added";
+    
+    if(returnCode == NO)
+        returnMsg = @"Person Add Failed";
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"SQLite Insert" message:returnMsg preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+                    
+    
+    
 }
 // This code is meant to load the imagepicker
 -(IBAction)selectPhoto:(UIButton *)sender {
