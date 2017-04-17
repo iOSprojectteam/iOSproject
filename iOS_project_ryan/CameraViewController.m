@@ -5,7 +5,7 @@
 //  Created by Bradley Zwarich on 2017-03-29.
 //  Copyright © 2017 Bradley Zwarich. All rights reserved.
 //  This class is meant for taking a picture, and saving the picture
-//  Note: I do not claim I did all the code myself, I used stackexchange to complete the code when needed
+//  Note: I do not claim I did all the code myself, I used stackexchange to complete the code when needed.
 
 #import "CameraViewController.h"
 
