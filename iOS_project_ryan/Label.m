@@ -12,7 +12,7 @@
 @implementation Label
 @synthesize font, fontSize, fontDecoration, color, x, y, text;
 
--(id)initWithData:(NSString *)f theColor:(NSString *)c theText:(NSString *)t theSize:(NSNumber *)s theDecoration: (NSString *)d X:(NSInteger)posX Y:(NSInteger)posY
+-(id)initWithData:(NSString *)f theColor:(UIColor *)c theText:(NSString *)t theSize:(NSUInteger)s theDecoration: (NSString *)d X:(NSInteger)posX Y:(NSInteger)posY
 {
     if (self = [super init])
     {

@@ -33,9 +33,10 @@
         //
      */
     // Add the selected sticker into the array
-    Label *label = [_mainDelegate.addedLabels lastObject];
+    
     NSLog(@"TESTING %@", label.text);
     //Get actual numbers next time
+    
     NSLog(@"Value %@", self.valueLabel.text);
     NSLog(@"Value %@", self.color.text);
 }
@@ -45,10 +46,9 @@
  **/
 - (IBAction)stepperValueChanged:(UIStepper *)sender {
     NSUInteger value = sender.value;
-    self.valueLabel.text = [NSString stringWithFormat:@"%02d", value];
+    self.valueLabel.text = [NSString stringWithFormat:@"%02lu", (unsigned long)value];
 
-    
-
+    self.label.fontSize = value;
 }
 
 
@@ -78,7 +78,7 @@
     Processes the color users pick and displays it
  */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component {
-    NSLog(@"Selected Row %d", row);
+    NSLog(@"Selected Row %ld", (long)row);
     switch(row)
     {
             
@@ -107,6 +107,7 @@
             self.color.textColor = [UIColor colorWithRed:255.0f/255.0f green:   255.0f/255.0f blue:0.0f/255.0f alpha:255.0f/255.0f];
             break;
     }
+    label.color = self.color.textColor;
     
 }
 
@@ -114,15 +115,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.label = [_mainDelegate.addedLabels lastObject];
 
-
+    [self.picker selectRow:0 inComponent:0 animated:YES];
+    self.color.text = @"Blue #0000FF";
+    self.color.textColor = [UIColor colorWithRed:0.0f/255.0f green: 0.0f/255.0f blue:255.0f/255.0f alpha:255.0f/255.0f];
     
     self.colorArray  = [[NSArray alloc]         initWithObjects:@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
     
-    self.stepper.wraps = YES; self.stepper.autorepeat = YES;
-    NSUInteger value = self.stepper.value; self.valueLabel.text = [NSString stringWithFormat:@"%02d", value];
     
-    self.stepper.maximumValue = 10;
+    self.stepper.wraps = YES; self.stepper.autorepeat = YES;
+    self.stepper.value = 24;
+    NSUInteger value = 24;
+    self.valueLabel.text = [NSString stringWithFormat:@"%02lu", (unsigned long)value];
+    self.stepper.maximumValue = 100;
 }
 
 - (void)didReceiveMemoryWarning {
