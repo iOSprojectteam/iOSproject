@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UM-1A-64Z">
-                                <rect key="frame" x="155" y="498" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Web view"/>
-                                <connections>
-                                    <segue destination="S54-wq-qmK" kind="presentation" id="MdP-3p-xwy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiR-BE-jgL">
                                 <rect key="frame" x="157" y="318" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,14 +35,6 @@
                                 <state key="normal" title="History"/>
                                 <connections>
                                     <segue destination="3ul-aw-Elc" kind="presentation" id="K4j-4u-0sJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-cm-psY">
-                                <rect key="frame" x="164" y="469" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
-                                <connections>
-                                    <segue destination="Uhp-yB-KYH" kind="presentation" id="g5J-tq-tMm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHs-gr-sjr">
@@ -75,6 +59,14 @@
                                 <state key="normal" title="Choose Picture"/>
                                 <connections>
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="79n-YK-eD3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UM-1A-64Z">
+                                <rect key="frame" x="156" y="470" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Web view"/>
+                                <connections>
+                                    <segue destination="S54-wq-qmK" kind="presentation" id="MdP-3p-xwy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -679,10 +671,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-9b-vVs">
-                                <rect key="frame" x="26" y="292" width="303" height="215"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYh-YZ-wpW">
                                 <rect key="frame" x="36" y="76" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -763,6 +751,10 @@
                                     <action selector="savePreferences" destination="bYo-Gr-E9E" eventType="touchUpInside" id="bAh-sv-gPh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-9b-vVs">
+                                <rect key="frame" x="87" y="299" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -770,6 +762,7 @@
                         <outlet property="avatar" destination="3vx-9b-vVs" id="zoM-Vz-4wn"/>
                         <outlet property="favouriteColour" destination="IO7-ck-Y54" id="hGE-ij-gQ0"/>
                         <outlet property="favouriteSize" destination="ONL-5b-ZpK" id="WDp-l5-WmJ"/>
+                        <outlet property="imageView" destination="3vx-9b-vVs" id="xFv-RE-Tix"/>
                         <outlet property="name" destination="nUy-VY-VgW" id="I3j-PS-L7m"/>
                     </connections>
                 </viewController>
@@ -905,11 +898,10 @@
         <image name="person.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qwZ-Y7-YVz"/>
-        <segue reference="125-SX-0ko"/>
-        <segue reference="Lok-32-MbG"/>
-        <segue reference="Sfc-8X-eAQ"/>
-        <segue reference="mx0-Di-6tJ"/>
-        <segue reference="ldw-So-BXX"/>
+        <segue reference="K4j-4u-0sJ"/>
+        <segue reference="L4s-Aj-hb9"/>
+        <segue reference="Gwb-K2-K4n"/>
+        <segue reference="coq-AL-Rx5"/>
+        <segue reference="MdP-3p-xwy"/>
     </inferredMetricsTieBreakers>
 </document>
