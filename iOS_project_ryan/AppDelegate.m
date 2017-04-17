@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <sqlite3.h>
 
+
 @interface AppDelegate ()
 
 @end
@@ -34,23 +35,22 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
     return;
 }
 
--(BOOL)insertIntoDatabase:(Store *)person {
-    /* Data types in the database
-     
-     */
-    
+-(BOOL)insertIntoDatabase:(User *)person {
     /*
+    
     sqlite3 *database;
     BOOL returnCode = YES;
     
     if(sqlite3_open([self.databasePath UTF8String], &database) == SQLITE_OK)
     {
-        char *sqlStatement = "insert into person values(NULL, ?, ?, ?, ?, ?, ?, ?)";
+        char *sqlStatement = "insert into person values(NULL, ?, ?, ?)";
         sqlite3_stmt *compiledStatement;
         
         if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
-            sqlite3_bind_text(compiledStatement, 1, [person.avatar UTF8String], -1,SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 2, [person.name UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 1, [person.name UTF8String], -1,SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 2, [person.favouriteFont UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 3, [person.favouriteColour UTF8String], -1, SQLITE_TRANSIENT);
+            
         }
         
         if(sqlite3_step(compiledStatement) != SQLITE_DONE)
@@ -67,8 +67,9 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
     
     sqlite3_close(database);
     return returnCode;
-     */
-    return YES;
+    */
+     return YES;
+
     
 }
 

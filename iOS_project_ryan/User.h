@@ -24,5 +24,7 @@
 @property (nonatomic, strong) NSString *favouriteFont;
 @property (nonatomic, strong) NSString *favouriteColour;
 
+-(id)initWIthData:(NSString *)n theFont:(NSString *)f theColour:(NSString *)c;
+
 
 @end

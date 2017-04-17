@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Store.h"
 #import "Picture.h"
+#import "User.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     NSString *databaseName;
@@ -44,6 +45,6 @@
 
 -(void)readDataFromDatabase;
 -(void)checkAndCreateDatabase;
--(BOOL)insertIntoDatabase:(Store *)person;
+-(BOOL)insertIntoDatabase:(User *)person;
 @end
 
