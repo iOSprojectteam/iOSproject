@@ -127,6 +127,9 @@
     
     CGFloat paddingX = 20.f;
     CGFloat paddingY = 20.f;
+    
+    NSLog(@"%@", l.color);
+    NSLog(@"%lu", (unsigned long)l.fontSize);
 
     UIFont *font = [UIFont boldSystemFontOfSize:12];
     UIColor *textColor = [UIColor colorWithWhite:0.5 alpha:1.0];

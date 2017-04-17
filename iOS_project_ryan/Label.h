@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Label : NSObject {
     NSString *font;
-    NSNumber *fontSize;
-    NSString *color;
+    NSUInteger fontSize;
+    UIColor *color;
     NSInteger x;
     NSInteger y;
     NSString *text;
@@ -20,14 +21,14 @@
 }
 
 @property(nonatomic, strong)NSString *font;
-@property(nonatomic, strong)NSNumber *fontSize;
-@property(nonatomic, strong)NSString *color;
+@property(nonatomic)NSUInteger fontSize;
+@property(nonatomic, strong)UIColor *color;
 @property(nonatomic)NSInteger x;
 @property(nonatomic)NSInteger y;
 @property(nonatomic, strong)NSString *text;
 @property(nonatomic, strong)NSString *fontDecoration;
 
--(id)initWithData:(NSString *)f theColor:(NSString *)c theText:(NSString *)t theSize:(NSNumber *)s theDecoration: (NSString *)d X:(NSInteger)posX Y:(NSInteger)posY;
+-(id)initWithData:(NSString *)f theColor:(UIColor *)c theText:(NSString *)t theSize:(NSUInteger)s theDecoration: (NSString *)d X:(NSInteger)posX Y:(NSInteger)posY;
 -(id)initWithText:(NSString *)t;
 
 @end

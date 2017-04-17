@@ -12,6 +12,7 @@
 
 @interface FontViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
     AppDelegate *mainDelegate;
+    Label * label;
 
 }
 @property (strong, nonatomic) IBOutlet UILabel *color;
@@ -23,6 +24,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *valueLabel;
 @property (nonatomic, weak) IBOutlet UIStepper *stepper;
 @property (nonatomic, strong) AppDelegate *mainDelegate;
+@property (nonatomic, strong) Label * label;
 
 
 @end
