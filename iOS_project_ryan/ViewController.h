@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
 
 UIButton *btnHistory;
 UIButton *btnShare;
+AppDelegate *mainDelegate;
 }
 
 @property (nonatomic, strong) UIButton *btnHistory;
 @property (nonatomic, strong) UIButton *btnShare;
+@property (nonatomic, strong) AppDelegate *mainDelegate;
 
 @end
 
