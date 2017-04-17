@@ -26,7 +26,6 @@
 - (IBAction)fontChange:(id)sender {
     
     /**
-     look at my code and you will see I have Label class and addedLabels array in appDelegate. so the fontViewController must take the last element in the array of labels and apply settings to it. You can change the class if you need to
      
         //Take last element in the array of labels and apply:
             - Font size
@@ -39,16 +38,11 @@
     //Get actual numbers next time
     NSLog(@"Value %@", self.valueLabel.text);
     NSLog(@"Value %@", self.color.text);
-    
-    
-    
-
-
-
-    
-    
 }
 
+/*
+    Change values on font sizes
+ **/
 - (IBAction)stepperValueChanged:(UIStepper *)sender {
     NSUInteger value = sender.value;
     self.valueLabel.text = [NSString stringWithFormat:@"%02d", value];
@@ -59,20 +53,30 @@
 
 
 
-// returns the number of 'columns' to display.
+/**
+ returns the number of 'columns' to display.
+ */
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
-// returns the # of rows in each component..
+/**
+ returns the # of rows in each component.
+ */
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component {
     return 6;
 }
 
+/**
+    Returns the row item in the pickerview
+ */
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component {
     return [self.colorArray objectAtIndex:row];
 }
 
+/**
+    Processes the color users pick and displays it
+ */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component {
     NSLog(@"Selected Row %d", row);
     switch(row)
