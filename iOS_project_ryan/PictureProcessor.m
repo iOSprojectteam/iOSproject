@@ -131,8 +131,8 @@
     NSLog(@"%@", l.color);
     NSLog(@"%lu", (unsigned long)l.fontSize);
 
-    UIFont *font = [UIFont boldSystemFontOfSize:12];
-    UIColor *textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+    UIFont *font = [UIFont boldSystemFontOfSize:l.fontSize];
+    UIColor *textColor = l.color;
     //[[UIColor whiteColor] set];
     NSDictionary *att = @{NSForegroundColorAttributeName: textColor, NSFontAttributeName:font};
     CGSize textSize = [l.text sizeWithAttributes:att];

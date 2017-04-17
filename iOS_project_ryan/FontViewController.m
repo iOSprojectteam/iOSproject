@@ -14,6 +14,7 @@
 @end
 
 @implementation FontViewController
+@synthesize  mainDelegate, label, size;
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -39,6 +40,11 @@
     
     NSLog(@"Value %@", self.valueLabel.text);
     NSLog(@"Value %@", self.color.text);
+    
+    self.label.color = self.color.textColor;
+    if (self.size != 0) {
+        self.label.fontSize = self.size;
+    }
 }
 
 /*
@@ -47,8 +53,8 @@
 - (IBAction)stepperValueChanged:(UIStepper *)sender {
     NSUInteger value = sender.value;
     self.valueLabel.text = [NSString stringWithFormat:@"%02lu", (unsigned long)value];
-
-    self.label.fontSize = value;
+    self.size = value;
+    
 }
 
 
@@ -107,15 +113,14 @@
             self.color.textColor = [UIColor colorWithRed:255.0f/255.0f green:   255.0f/255.0f blue:0.0f/255.0f alpha:255.0f/255.0f];
             break;
     }
-    label.color = self.color.textColor;
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    self.label = [_mainDelegate.addedLabels lastObject];
+    mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.label = [mainDelegate.addedLabels lastObject];
 
     [self.picker selectRow:0 inComponent:0 animated:YES];
     self.color.text = @"Blue #0000FF";
@@ -123,10 +128,17 @@
     
     self.colorArray  = [[NSArray alloc]         initWithObjects:@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
     
-    
+    NSUInteger value;
     self.stepper.wraps = YES; self.stepper.autorepeat = YES;
-    self.stepper.value = 24;
-    NSUInteger value = 24;
+    if (label.fontSize == 0){
+        self.stepper.value =  24;
+        value = 24;
+    } else {
+        self.stepper.value =  label.fontSize;
+        value = label.fontSize;
+
+    }
+    
     self.valueLabel.text = [NSString stringWithFormat:@"%02lu", (unsigned long)value];
     self.stepper.maximumValue = 100;
 }

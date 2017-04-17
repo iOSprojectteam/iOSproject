@@ -13,6 +13,7 @@
 @interface FontViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
     AppDelegate *mainDelegate;
     Label * label;
+    NSUInteger size;
 
 }
 @property (strong, nonatomic) IBOutlet UILabel *color;
@@ -25,6 +26,7 @@
 @property (nonatomic, weak) IBOutlet UIStepper *stepper;
 @property (nonatomic, strong) AppDelegate *mainDelegate;
 @property (nonatomic, strong) Label * label;
+@property (nonatomic) NSUInteger size;
 
 
 @end

@@ -116,7 +116,7 @@
 }
 -(IBAction)unwindToThisEditViewController:(UIStoryboardSegue *)sender
 {
-    
+    [self redraw];
 }
 
 // hide keyboard
@@ -144,6 +144,8 @@
 // add label and redraw
 - (IBAction)addLabel:(id)sender {
     Label *newLabel = [[Label alloc] initWithText: tfText.text];
+    newLabel.color = [UIColor colorWithWhite:0.5 alpha:1.0];
+    newLabel.fontSize = 24;
     [mainDelegate.addedLabels addObject:newLabel];
     [tfText setText:@""];
     [self redraw];
