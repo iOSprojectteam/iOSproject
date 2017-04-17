@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "AppDelegate.h"
+
 
 
 @interface UserViewController : UIViewController<UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -23,7 +25,6 @@
     // holds the avatar's picture
     IBOutlet UIImageView *imageView;
     
-    AppDelegate *mainDelegate;
     
     
 }
@@ -31,7 +32,7 @@
 @property(nonatomic, strong)IBOutlet UITextField *name;
 @property(nonatomic, strong)IBOutlet UITextField *favouriteSize;
 @property(nonatomic, strong)IBOutlet UITextField *favouriteColour;
-@property(nonatomic, strong) IBOutlet UIImageView *imageView;
-@property(nonatomic, strong) AppDelegate *mainDelegate;
+@property(nonatomic, strong)IBOutlet UIImageView *imageView;
+@property(nonatomic, strong)AppDelegate *mainDelegate;
 @end
 
