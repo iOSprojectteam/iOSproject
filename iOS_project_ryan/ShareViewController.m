@@ -27,6 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//this method is to post an image on facebook. user must be signed onto the phone
 -(IBAction)postMe:(id)sender{
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
@@ -48,7 +49,7 @@
     }
     
 }
-
+//this method allows the user to send a picture via email
 -(IBAction)sendViaEmail:(id)sender{
 
     if (![MFMailComposeViewController canSendMail]) {
@@ -61,7 +62,6 @@
     
     // Configure the fields of the interface.
     
-    //NSData *myImg = mainDelegate.selectedImg.renderedImg;
     NSData *imageData = UIImagePNGRepresentation(mainDelegate.selectedImg.renderedImg);
     NSString *emailAddress = emailAd.text;
     NSArray *recipients = [NSArray arrayWithObjects:emailAddress, nil];
@@ -75,10 +75,9 @@
 
 }
 
-- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    switch (result)
-    {
+//this method is to handle the result of the mail composer
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    switch (result){
         case MFMailComposeResultCancelled:
         NSLog(@"Mail cancelled");
         break;
@@ -99,8 +98,8 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
--(bool)textFieldShouldReturn:(UITextField *)textField
-{
+//this method hides back the keybaord.
+-(bool)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return NO;
 }

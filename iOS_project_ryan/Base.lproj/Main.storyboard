@@ -496,18 +496,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-sh-fvE">
-                                <rect key="frame" x="266" y="574" width="98" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Edit" backgroundImage="download.jpeg">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="editAgain:" destination="3ul-aw-Elc" eventType="touchUpInside" id="Mdq-s8-oAD"/>
-                                    <segue destination="pDP-rR-Hcl" kind="presentation" id="qwZ-Y7-YVz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJi-W5-bMw">
                                 <rect key="frame" x="7" y="620" width="98" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -531,7 +519,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTZ-b7-ejt">
-                                <rect key="frame" x="138" y="574" width="98" height="38"/>
+                                <rect key="frame" x="68" y="574" width="98" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Share" backgroundImage="download.jpeg">
@@ -583,6 +571,18 @@
                                     <outlet property="delegate" destination="3ul-aw-Elc" id="Jko-LO-QOS"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-sh-fvE">
+                                <rect key="frame" x="210" y="574" width="98" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Edit" backgroundImage="download.jpeg">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editAgain:" destination="3ul-aw-Elc" eventType="touchUpInside" id="Mdq-s8-oAD"/>
+                                    <segue destination="pDP-rR-Hcl" kind="presentation" id="qwZ-Y7-YVz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -628,7 +628,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4a-Ld-rRw">
-                                <rect key="frame" x="43" y="529" width="288" height="63"/>
+                                <rect key="frame" x="43" y="523" width="288" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Share via Email" backgroundImage="download.jpeg">
@@ -639,7 +639,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVP-WT-R9J">
-                                <rect key="frame" x="43" y="600" width="288" height="59"/>
+                                <rect key="frame" x="43" y="594" width="288" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Share via Facebook" backgroundImage="download.jpeg">
@@ -650,7 +650,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pl3-mF-tg4">
-                                <rect key="frame" x="43" y="298" width="288" height="223"/>
+                                <rect key="frame" x="43" y="298" width="288" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Message..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mps-Lc-CZN">
@@ -926,7 +926,7 @@
         <segue reference="125-SX-0ko"/>
         <segue reference="Lok-32-MbG"/>
         <segue reference="Sfc-8X-eAQ"/>
-        <segue reference="AtY-W7-Ip1"/>
-        <segue reference="Wnv-2K-0UC"/>
+        <segue reference="mx0-Di-6tJ"/>
+        <segue reference="ldw-So-BXX"/>
     </inferredMetricsTieBreakers>
 </document>

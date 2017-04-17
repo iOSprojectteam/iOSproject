@@ -11,7 +11,7 @@
 
 @implementation Picture
 @synthesize stkArray, lblArray, renderedImg, mainImg;
-
+//constructor
 -(id)initWithData:(UIImage *)img theLabels:(NSMutableArray *)l theStickers:(NSMutableArray *)s theRenderedImg:(UIImage *)r{
     if (self = [super init]){
         [self setMainImg:img];

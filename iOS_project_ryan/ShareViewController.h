@@ -4,7 +4,7 @@
 //
 //  Created by Habibullah Ghazniwa on 2017-03-12.
 //  Copyright © 2017 Habibullah Ghazniwa. All rights reserved.
-//
+// this handles the share view controller
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>

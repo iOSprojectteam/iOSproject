@@ -2,8 +2,8 @@
 //  WebViewController.h
 //  iOS_project_ryan
 //
-//  Created by Habib Ghazniwal on 2017-03-12.
-//  Copyright © 2017 Habib Ghazniwal. All rights reserved.
+//  Created by Charles Javelona. on 2017-03-12.
+//  Copyright © 2017 Charles Javelona. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
