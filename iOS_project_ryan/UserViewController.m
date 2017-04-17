@@ -78,8 +78,6 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
-    
-    mainDelegate.originalImage = chosenImage;
 
 
     [picker dismissViewControllerAnimated:YES completion:NULL];

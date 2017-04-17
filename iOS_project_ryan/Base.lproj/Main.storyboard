@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UM-1A-64Z">
-                                <rect key="frame" x="154" y="195" width="66" height="30"/>
+                                <rect key="frame" x="155" y="498" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Web view"/>
                                 <connections>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiR-BE-jgL">
-                                <rect key="frame" x="155" y="254" width="64" height="30"/>
+                                <rect key="frame" x="157" y="318" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit View"/>
                                 <connections>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBy-HI-XG5">
-                                <rect key="frame" x="154" y="318" width="66" height="30"/>
+                                <rect key="frame" x="155" y="368" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="History"/>
                                 <connections>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-cm-psY">
-                                <rect key="frame" x="154" y="377" width="46" height="30"/>
+                                <rect key="frame" x="164" y="469" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
@@ -54,11 +54,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHs-gr-sjr">
-                                <rect key="frame" x="137" y="443" width="81" height="30"/>
+                                <rect key="frame" x="148" y="420" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="User Profile"/>
                                 <connections>
                                     <segue destination="bYo-Gr-E9E" kind="presentation" id="Gwb-K2-K4n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYQ-jq-evW">
+                                <rect key="frame" x="90" y="271" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Use Camera to take a picture"/>
+                                <connections>
+                                    <segue destination="2H0-7Q-zwS" kind="presentation" id="coq-AL-Rx5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGe-zm-SfQ">
+                                <rect key="frame" x="27" y="223" width="322" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose Picture"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="79n-YK-eD3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,14 +97,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-dn-lBy">
-                                <rect key="frame" x="239" y="73" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose Template"/>
-                                <connections>
-                                    <segue destination="Y9v-31-FWS" kind="presentation" id="Qao-yL-xlr"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdC-f0-cSy">
                                 <rect key="frame" x="0.0" y="111" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -108,7 +116,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-vW-Np5">
-                                <rect key="frame" x="16" y="73" width="79" height="30"/>
+                                <rect key="frame" x="89" y="73" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Sticker"/>
                                 <connections>
@@ -120,12 +128,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Edit" id="KlT-nj-YUv">
-                                        <barButtonItem key="leftBarButtonItem" title="Save Image" id="FOQ-Tg-bAv">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="fB4-qI-6H6">
+                                            <connections>
+                                                <segue destination="V6t-7i-vkY" kind="unwind" unwindAction="unwindToThisViewController:" id="sU2-aA-rH4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save Image" id="FOQ-Tg-bAv">
                                             <connections>
                                                 <action selector="savePhoto:" destination="pDP-rR-Hcl" id="IPc-SP-glV"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Share" id="BQS-sT-Vzh"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -135,17 +147,25 @@
                                 <items>
                                     <barButtonItem title="History" id="4Mz-zX-lri">
                                         <connections>
-                                            <segue destination="V6t-7i-vkY" kind="unwind" unwindAction="unwindToThisViewController:" id="z7U-mt-Y1n"/>
+                                            <segue destination="3ul-aw-Elc" kind="presentation" id="125-SX-0ko"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HiQ-MU-WBb"/>
-                                    <barButtonItem title="Photo" id="Z8W-Kd-Dj6"/>
+                                    <barButtonItem title="Photo" id="Z8W-Kd-Dj6">
+                                        <connections>
+                                            <segue destination="2H0-7Q-zwS" kind="presentation" id="AtY-W7-Ip1"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="p6b-Ri-HAL"/>
-                                    <barButtonItem title="Settings" id="cKF-34-IaC"/>
+                                    <barButtonItem title="My Profile" id="cKF-34-IaC">
+                                        <connections>
+                                            <segue destination="bYo-Gr-E9E" kind="presentation" id="Wnv-2K-0UC"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-pm-bbY">
-                                <rect key="frame" x="153" y="73" width="69" height="30"/>
+                                <rect key="frame" x="232" y="73" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Label"/>
                                 <connections>
@@ -468,26 +488,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="HIstory" id="qFC-al-hJy">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="W53-Nf-UMG">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="W53-Nf-UMG">
                                             <connections>
                                                 <segue destination="Ial-eS-7YP" kind="unwind" unwindAction="unwindToThisViewController:" id="hVx-SG-kGv"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Select" id="xGI-Ce-KwA"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxX-hh-OWo">
-                                <rect key="frame" x="7" y="574" width="98" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Delete" backgroundImage="download.jpeg">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="deleteSelectedImg:" destination="3ul-aw-Elc" eventType="touchUpInside" id="yHE-ed-qYz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-sh-fvE">
                                 <rect key="frame" x="266" y="574" width="98" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -747,7 +755,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="User Profile" id="Qqi-cT-CVn">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="4QH-n8-YwK">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="4QH-n8-YwK">
                                             <connections>
                                                 <segue destination="P7q-MP-o0A" kind="unwind" unwindAction="unwindToThisViewController:" id="byE-Bv-QCs"/>
                                             </connections>
@@ -769,14 +777,6 @@
                                 <state key="normal" title="Save Settings"/>
                                 <connections>
                                     <action selector="savePreferences" destination="bYo-Gr-E9E" eventType="touchUpInside" id="bAh-sv-gPh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPz-Af-CrA">
-                                <rect key="frame" x="141" y="593" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera Page"/>
-                                <connections>
-                                    <segue destination="2H0-7Q-zwS" kind="modal" id="aiM-4Y-2lb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -870,12 +870,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n08-sc-kz0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwd-OX-oSb">
-                                <rect key="frame" x="26" y="556" width="322" height="30"/>
+                                <rect key="frame" x="26" y="547" width="322" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Picture"/>
                                 <connections>
@@ -883,13 +879,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-5E-v6z">
-                                <rect key="frame" x="26" y="594" width="322" height="30"/>
+                                <rect key="frame" x="26" y="585" width="322" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Picture"/>
                                 <connections>
                                     <segue destination="pDP-rR-Hcl" kind="presentation" id="c1R-SE-j2z"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RmY-IK-AHd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="JEV-6g-Qng">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="cNw-Xy-Wq0">
+                                            <connections>
+                                                <segue destination="QRR-Lq-hxA" kind="unwind" unwindAction="unwindToThisViewController:" id="87M-9o-Mzj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n08-sc-kz0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="426"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -898,8 +911,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wh-LU-8Mr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QRR-Lq-hxA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-358" y="-1344"/>
+            <point key="canvasLocation" x="-359.19999999999999" y="-1344.3778110944529"/>
         </scene>
     </scenes>
     <resources>
@@ -907,10 +921,11 @@
         <image name="person.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qwZ-Y7-YVz"/>
-        <segue reference="mx0-Di-6tJ"/>
-        <segue reference="Lok-32-MbG"/>
-        <segue reference="ldw-So-BXX"/>
         <segue reference="Sfc-8X-eAQ"/>
+        <segue reference="125-SX-0ko"/>
+        <segue reference="c1R-SE-j2z"/>
+        <segue reference="mx0-Di-6tJ"/>
+        <segue reference="ldw-So-BXX"/>
+        <segue reference="Lok-32-MbG"/>
     </inferredMetricsTieBreakers>
 </document>
