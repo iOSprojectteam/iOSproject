@@ -27,9 +27,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+//this method is to post an image on facebook. user must be signed onto the phone
 -(IBAction)postMe:(id)sender{
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [fbPost addImage:mainDelegate.selectedImg.renderedImg];
         [fbPost setInitialText: personalMsg.text];
         [fbPost setCompletionHandler:^(SLComposeViewControllerResult result){
             if (result == SLComposeViewControllerResultCancelled) {
@@ -47,7 +49,7 @@
     }
     
 }
-
+//this method allows the user to send a picture via email
 -(IBAction)sendViaEmail:(id)sender{
 
     if (![MFMailComposeViewController canSendMail]) {
@@ -55,23 +57,27 @@
         return;
     }
     
-    MFMailComposeViewController* composeVC = [[MFMailComposeViewController alloc] init];
-    composeVC.mailComposeDelegate = self;
+    MFMailComposeViewController* myMail = [[MFMailComposeViewController alloc] init];
+    myMail.mailComposeDelegate = self;
     
     // Configure the fields of the interface.
-    [composeVC setToRecipients:@[emailAd.text]];
-    [composeVC setSubject:@"Check this out!"];
-    [composeVC setMessageBody: personalMsg.text isHTML:NO];
+    
+    NSData *imageData = UIImagePNGRepresentation(mainDelegate.selectedImg.renderedImg);
+    NSString *emailAddress = emailAd.text;
+    NSArray *recipients = [NSArray arrayWithObjects:emailAddress, nil];
+    [myMail addAttachmentData:imageData mimeType:@"image/png" fileName:@"photo"];
+    [myMail setToRecipients:recipients];
+    [myMail setSubject:@"Check this out!"];
+    [myMail setMessageBody: personalMsg.text isHTML:NO];
     
     // Present the view controller modally.
-    [self presentViewController:composeVC animated:YES completion:nil];
+    [self presentViewController:myMail animated:YES completion:nil];
 
 }
 
-- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    switch (result)
-    {
+//this method is to handle the result of the mail composer
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    switch (result){
         case MFMailComposeResultCancelled:
         NSLog(@"Mail cancelled");
         break;
@@ -91,6 +97,13 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+//this method hides back the keybaord.
+-(bool)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return NO;
+}
+
 /*
 #pragma mark - Navigation
 

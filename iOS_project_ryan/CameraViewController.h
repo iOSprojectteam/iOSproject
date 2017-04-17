@@ -2,7 +2,7 @@
 //  CameraViewController.h
 //  FinalProject
 //
-//  Created by Xcode User on 2017-03-29.
+//  Created by Bradley Zwarich on 2017-03-29.
 //  Copyright © 2017 Bradley Zwarich. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  EditViewController.m
 //  iOS_project_ryan
 //
-//  Created by Galimova Galina on 2017-03-12.
-//  Copyright © 2017 Ryan Falcon. All rights reserved.
+//  Created by Ryan Galimova on 2017-03-12.
+//  Copyright © 2017 Ryan Galimova. All rights reserved.
 //
 
 #import "EditViewController.h"
@@ -18,6 +18,7 @@
 
 #pragma mark collection_view
 
+// number of items in sticker array
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return stickerThumbs.count;
 }
@@ -57,16 +58,18 @@
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
     // Do any additional setup after loading the view.
-    mainDelegate.addedStickers = [NSMutableArray array];
-    mainDelegate.addedLabels = [NSMutableArray array];
+    
 
     stickerThumbs = [NSArray arrayWithObjects:@"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"person.png", nil];
+    
+    // load picture from camera or use default
     if (mainDelegate.originalImage == NULL)
         [self setupWithImage: [UIImage imageNamed:@"person.png"]];
     else
         [self setupWithImage:mainDelegate.originalImage];
 }
 
+// put the loaded picture to imageView and apply stickers and labels
 - (void)setupWithImage:(UIImage*)image {
     UIImage * fixedImage = [image imageWithFixedOrientation];
     mainDelegate.originalImage = fixedImage;
@@ -74,14 +77,17 @@
     
     // Commence with processing!
     [PictureProcessor sharedPictureProcessor].delegate = self;
+    
     [self redraw];
 }
 
+// apply stickers and labels
 -(void) redraw{
     [[PictureProcessor sharedPictureProcessor] placeStickers:mainDelegate.originalImage stickers:mainDelegate.addedStickers labels:mainDelegate.addedLabels];
     
 }
 
+// delete last sticker
 -(IBAction)deleteSticker:(id)sender
 {
     [mainDelegate.addedStickers removeObject:mainDelegate.addedStickers.lastObject];
@@ -94,6 +100,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// switch between two views in the view container
 - (IBAction)showComponent:(UIButton *)sender {
     if ([sender.titleLabel.text  isEqual: @"Add Sticker"]) {
         [UIView animateWithDuration:(0.5) animations:^{
@@ -112,6 +119,7 @@
     
 }
 
+// hide keyboard
 -(bool)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
@@ -128,12 +136,12 @@
     
     //save to history
     Picture *p = [[Picture alloc] initWithData: mainDelegate.originalImage theLabels: mainDelegate.addedLabels theStickers:mainDelegate.addedStickers theRenderedImg: self.mainImageView.image];
-
     [mainDelegate.pictureHistory addObject:p];
 
     
 }
 
+// add label and redraw
 - (IBAction)addLabel:(id)sender {
     Label *newLabel = [[Label alloc] initWithText: tfText.text];
     [mainDelegate.addedLabels addObject:newLabel];
@@ -142,6 +150,7 @@
 
 }
 
+// delete last label
 - (IBAction)deleteLabel:(id)sender {
     [mainDelegate.addedLabels removeObject:mainDelegate.addedLabels.lastObject];
     [self redraw];
@@ -150,6 +159,7 @@
 
 #pragma mark Protocol Conformance
 
+// callback from picture processor, puts the rendered image to the image view
 - (void)didFinishedPlacingStickers:(UIImage *)outputPicture {
     self.mainImageView.image = outputPicture;
 }

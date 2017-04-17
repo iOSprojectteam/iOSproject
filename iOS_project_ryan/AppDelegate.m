@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  iOS_project_ryan
 //
-//  Created by Galimova Galina on 2017-03-12.
-//  Copyright © 2017 Ryan Falcon. All rights reserved.
+//  Created by Ryan Galimova on 2017-03-12.
+//  Copyright © 2017 Ryan Galimova, Habib Ghazniwal, Charles Javelona. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -143,6 +143,8 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
     [self imageTaken];
 
     self.pictureHistory = [[NSMutableArray alloc] init];
+    self.addedStickers = [[NSMutableArray array] init];
+    self.addedLabels = [[NSMutableArray array]init];
 
     return YES;
 }

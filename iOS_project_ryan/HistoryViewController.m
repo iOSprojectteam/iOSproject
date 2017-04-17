@@ -13,12 +13,14 @@
 @end
 
 @implementation HistoryViewController
-@synthesize sampleAr, mainDelgate, selectedPic;
+@synthesize mainDelgate, selectedPic;
 
+// This method is to get the number of pictures for the collection view
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return mainDelgate.pictureHistory.count;
 }
 
+// this is to create cells for the collection view
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"Cell1";
     
@@ -33,17 +35,25 @@
     return cell;
 }
 
+//this method is to unwind to history view
+-(IBAction)unwindToThisHistoryController:(UIStoryboardSegue *)sender{
+    
+}
+
+
+//This method is for selecting an item from collection view
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    // Determine the selected sticker by using the indexPath
-    // NSLog(@"%ld, %ld", (long)indexPath.section, (long)indexPath.row);
+    
     selectedPic = [mainDelgate.pictureHistory objectAtIndex:indexPath.row];
     mainDelgate.selectedImg = selectedPic;
     
 }
 
--(IBAction)goToShare:(id)sender{
-    UIViewController *shareVC = [[UIViewController alloc] init];
-    [self.navigationController pushViewController:shareVC animated:YES];
+//this method is to set up main delegate objects so that they can be re-editted in edit view.
+-(IBAction)editAgain:(id)sender{
+    mainDelgate.originalImage = selectedPic.mainImg;
+    mainDelgate.addedLabels = selectedPic.lblArray;
+    mainDelgate.addedStickers = selectedPic.stkArray;
 }
 
 
@@ -52,8 +62,7 @@
     // Do any additional setup after loading the view.
     mainDelgate = (AppDelegate  *) [[UIApplication sharedApplication] delegate];
     
-    //[NSArray arrayWithObjects:@"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"person.png", nil];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {

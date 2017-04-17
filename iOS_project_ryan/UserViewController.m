@@ -2,7 +2,7 @@
 //  ViewController.m
 //  FinalProject
 //
-//  Created by Xcode User on 2017-03-13.
+//  Created by Bradley Zwarich on 2017-03-13.
 //  Copyright © 2017 Bradley Zwarich. All rights reserved.
 //  User .M File
 //  Note: I do not claim I did all the code myself, I used stackexchange to complete the code when needed
@@ -14,9 +14,11 @@
 @end
 
 @implementation UserViewController
-@synthesize avatar, name, favouriteFont, favouriteColour, imageView;
+@synthesize avatar, name, favouriteSize, favouriteColour, imageView, mainDelegate;
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+
+
+-(bool)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return NO;
@@ -26,17 +28,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     //fill in the user defaults
     self.favouriteColour.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"colour"];
-    self.favouriteFont.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"font"];
+    self.favouriteSize.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"size"];
     self.name.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"name"];
     NSData* imageData = [[NSUserDefaults standardUserDefaults] objectForKey:@"avatar"];
     UIImage* imageInsert = [UIImage imageWithData:imageData];
     self.imageView.image = imageInsert;
     
-    
-}
+    }
 
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +53,7 @@
 {
     [[NSUserDefaults standardUserDefaults] setObject:self.favouriteColour.text forKey:@"colour"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [[NSUserDefaults standardUserDefaults] setObject:self.favouriteFont.text forKey:@"font"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.favouriteSize.text forKey:@"size"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[NSUserDefaults standardUserDefaults] setObject:self.name.text forKey:@"name"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -76,7 +78,8 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
-    
+
+
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
