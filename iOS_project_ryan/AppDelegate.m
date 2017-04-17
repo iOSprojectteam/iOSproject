@@ -142,6 +142,8 @@ labelsArray, stickersArray, linksSharedArray, addedLabels, addedStickers, origin
     [self imageTaken];
 
     self.pictureHistory = [[NSMutableArray alloc] init];
+    self.addedStickers = [[NSMutableArray array] init];
+    self.addedLabels = [[NSMutableArray array]init];
 
     return YES;
 }

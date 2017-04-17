@@ -58,8 +58,7 @@
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
     // Do any additional setup after loading the view.
-    mainDelegate.addedStickers = [NSMutableArray array];
-    mainDelegate.addedLabels = [NSMutableArray array];
+    
 
     stickerThumbs = [NSArray arrayWithObjects:@"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"Funny-Face_Glasses.png", @"glass-tina-fey.png", @"glasses_pink", @"hammer_PNG3888.png", @"hat.png", @"heart.png", @"sparkle.png", @"Star-PNG-Clipart.png", @"sword-png-16.png", @"person.png", nil];
     

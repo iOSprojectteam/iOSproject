@@ -41,10 +41,16 @@
     // Determine the selected sticker by using the indexPath
     // NSLog(@"%ld, %ld", (long)indexPath.section, (long)indexPath.row);
     selectedPic = [mainDelgate.pictureHistory objectAtIndex:indexPath.row];
+    
     mainDelgate.selectedImg = selectedPic;
     
 }
 
+-(IBAction)editAgain:(id)sender{
+    mainDelgate.originalImage = selectedPic.mainImg;
+    mainDelgate.addedLabels = selectedPic.lblArray;
+    mainDelgate.addedStickers = selectedPic.stkArray;
+}
 
 
 -(IBAction)deleteSelectedImg:(id)sender{

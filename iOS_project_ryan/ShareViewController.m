@@ -63,8 +63,9 @@
     
     //NSData *myImg = mainDelegate.selectedImg.renderedImg;
     NSData *imageData = UIImagePNGRepresentation(mainDelegate.selectedImg.renderedImg);
+    NSArray *recipients = [NSArray arrayWithObjects:emailAd.text,nil];
     [myMail addAttachmentData:imageData mimeType:@"image/png" fileName:@"photo"];
-    [myMail setToRecipients:@[emailAd.text]];
+    [myMail setToRecipients:recipients];
     [myMail setSubject:@"Check this out!"];
     [myMail setMessageBody: personalMsg.text isHTML:NO];
     

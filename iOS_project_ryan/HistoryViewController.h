@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "Picture.h"
+
 @interface HistoryViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>{
 
     AppDelegate *mainDelgate;
